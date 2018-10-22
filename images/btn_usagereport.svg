@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="30px" height="30px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>images/btn_usagereport</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="images/btn_usagereport" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="boxicon-popular" transform="translate(3.000000, 2.000000)" fill="#686868" fill-rule="nonzero">
+            <path d="M5.33333333,8 L8,8 L8,21 L5.33333333,21 L5.33333333,8 Z M16,13.2 L18.6666667,13.2 L18.6666667,21 L16,21 L16,13.2 Z M21.3333333,15.8 L24,15.8 L24,21 L21.3333333,21 L21.3333333,15.8 Z M0,17.1 L2.66666667,17.1 L2.66666667,21 L0,21 L0,17.1 Z" id="Shape"></path>
+            <path d="M12,0 L6.66666667,5 L11.9586667,5 L10.6253333,5.0025 L10.6666667,20.9761914 L13.3333333,20.9711914 L13.292,5 L17.3333333,5 L12,0 Z M0,22.5 L24,22.5 L24,25 L0,25 L0,22.5 Z" id="Shape"></path>
+        </g>
+    </g>
+</svg>

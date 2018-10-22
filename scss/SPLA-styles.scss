@@ -1,0 +1,1233 @@
+@import 'mixins';
+//@import url(http://fonts.googleapis.com/css?family=Roboto:300,400,700);
+// Global Styles
+* {
+  box-sizing: border-box;
+}
+::selection {
+  background: $blue-neon;
+}
+html {
+  font-family: "Helvetica Neue", Helvetica, Arial, "微軟正黑體", "Microsoft JhengHei", sans-serif;
+}
+body {
+  color: #111;
+  font-family: "Helvetica Neue", Helvetica, Arial, "微軟正黑體", "Microsoft JhengHei", sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  overflow: hidden;
+  position: relative;
+  height: 100vh; 
+  margin: 0;
+  padding: 0;
+}
+a {
+  color: #000;
+  &:focus {
+    outline: none;
+  }
+}
+
+.align-center {
+  text-align: center;
+}
+
+.align-right {
+  text-align: right !important;
+}
+
+.float-right {
+  float: right;
+}
+
+.pscript {
+  color: #777;
+  font-size: 11px;
+  text-align: left;
+}
+.txt-small {
+  color: #999;
+  font-size: 11px;
+  font-weight: normal;
+}
+.txt-block {
+  display: block;
+}
+
+// icon Fonts
+@font-face {
+  font-family: 'SPLA_iconfont';
+  src:  url('../fonts/SPLA_iconfont.eot?muwhb8');
+  src:  url('../fonts/SPLA_iconfont.eot?muwhb8#iefix') format('embedded-opentype'),
+    url('../fonts/SPLA_iconfont.ttf?muwhb8') format('truetype'),
+    url('../fonts/SPLA_iconfont.woff?muwhb8') format('woff'),
+    url('../fonts/SPLA_iconfont.svg?muwhb8#SPLA_iconfont') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon_"], [class*=" icon_"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'SPLA_iconfont' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  font-size: 32px;
+  color: #a0a0a0;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon_chart_report:before {
+  content: "\e900";
+}
+.icon_history_report:before {
+  content: "\e901";
+}
+.icon_member_management:before {
+  content: "\e902";
+}
+.icon_product_info:before {
+  content: "\e903";
+}
+.icon_user_info:before {
+  content: "\e904";
+}
+
+// Button Styles
+.btn.active.focus,
+.btn.active:focus,
+.btn.focus,
+.btn:active.focus,
+.btn:active:focus,
+.btn:focus {
+  outline: none;
+}
+
+a.txt-link {
+  color: $blue-neon;
+  text-decoration: underline;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.btn-wrap {
+  border-top: 2px solid $blue-neon;
+  clear: both;
+  display: block;
+  float: left;
+  margin-top: 15px;
+  padding-top: 20px;
+  width: 100%;
+}
+
+.btn {
+  border: 0;
+  border-radius: 0;
+  display: inline-block;
+  font-size: 16px; 
+  font-weight: bold;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  transition-duration: 0.3s;
+  transition-property: transform;
+  text-decoration: none;
+  img {
+    float: left;
+    margin-right: 5px;
+  }
+}
+.btn-link {
+  background: none;
+  color: $blue-dark;
+}
+.btn-lg {
+  font-size: 18px;
+  padding: 12px 40px;
+}
+.btn-round {
+  @include borderRadius(2px);
+}
+.btn-flat-gray {
+  background: #eee;
+  color: #29abe2;
+  &:hover {
+    background: #ddd;
+  }
+}
+.btn-gradient {
+  color: #eee;
+  @include linear-gradient(top, $blue-gradientBtn-01, $blue-gradientBtn-02); 
+  &:hover,
+  &:focus {
+    background: $blue-gradientBtn-01;
+    color: #fff;
+    text-decoration: none;
+  }
+  &:focus {
+    @include dropShadow(0, 1px, 3px, 0px, $blue-neon);
+  }
+  &:active {
+    background: $blue-neon !important;
+  }
+}
+.btn-gradient-blue {
+  color: #fff;
+  @include linear-gradient(top, #38C0FF, #0093E7); 
+  &:hover,
+  &:focus {
+    background: #38C0FF;
+    color: #fff;
+    text-decoration: none;
+  }
+  &:focus {
+    @include dropShadow(0, 1px, 3px, 0px, #38C0FF);
+  }
+  &:active {
+    background: #0093E7!important;
+  }
+}
+.btn-gradient-red {
+  color: #fff;
+  @extend .btn-gradient;
+  @include linear-gradient(top, red, darken(red, 10%));
+  &:active {
+    background: red !important;
+  }
+  &:hover,
+  &:focus {
+    background: red !important;
+    color: #fff;
+  }
+}
+.btn-gradient-gray {
+  color: #fff !important;
+  @extend .btn-gradient;
+  @include linear-gradient(top, #bbb, #999);
+  &:hover,
+  &:focus {
+    background: #aaa;
+  }
+  &:active {
+    background: #ddd !important;
+  }
+}
+
+// Radio Button
+input[type=radio] {
+  position: absolute;
+  left: -9999px;
+  & + label {
+    background: #eee;
+    border: 1px solid #eee;
+    cursor: pointer;
+    color: #666;
+    padding: 6px 25px;
+    &:hover {
+      background: #ddd;
+    }
+  }
+  &:focus + label {
+    border: 1px solid darken($blue-neon, 10%);
+  }
+  &:not(:first-child) + label {
+    margin-left: 10px;
+  }
+
+  // Disabled
+  &:disabled, &.readonly {
+    & + label {
+      cursor: not-allowed;
+
+    }
+    // Disabled checked
+    &:checked + label {
+
+    }
+  }
+
+  // Checked
+  &:checked + label {
+    background: $blue-neon;
+    color: #000;
+  }
+}
+// 表格裡的按鈕
+.btn_intable_round {
+  border: none;
+  display: block;
+  width: 37px;
+  height: 37px;
+  transition: all .2s linear;
+  &:hover {
+    transform: scale(1.1,1.1);
+  }
+  &:disabled {
+    cursor: not-allowed;
+    &:hover {
+      transform: none;
+    }
+  }
+}
+//-- 編輯
+.btn_intable_edit {
+  background: url(../images/btn_round_edit.svg) no-repeat;
+  &:disabled, &.disabled {
+    background: url(../images/btn_round_edit_disable.svg) no-repeat;
+  }
+}
+//-- 重置密碼
+.btn_intable_resetPwd {
+  background: url(../images/btn_round_resetPwd.svg) no-repeat;
+  &:disabled, &.disabled {
+    background: url(../images/btn_round_resetPwd_disable.svg) no-repeat;
+  }
+}
+//-- 基本資料
+.btn_intable_userList {
+  background: url(../images/btn_round_userList.svg) no-repeat;
+  &:disabled, &.disabled {
+    background: url(../images/btn_round_userList_disable.svg) no-repeat;
+  }
+}
+//-- 報價品項
+.btn_intable_priceList {
+  background: url(../images/btn_round_priceList.svg) no-repeat;
+  &:disabled, &.disabled {
+    background: url(../images/btn_round_priceList_disable.svg) no-repeat;
+  }
+}
+
+
+// ------------------------------------------------------------------------------------------------ //
+// Page Styles
+.navbar-vertical {
+  //background: $blue-dark-01;
+  float: left;
+  position: fixed;
+  width: 100px;
+  height: 100%;
+  @include linear-gradient(top, $blue-dark-01, $blue-dark-03);
+}
+#admin-navbar {
+  background: #00224A;
+  border: none;
+  margin-bottom: 0;
+  @include borderRadius(0);
+}
+
+// Vertical Menu bar
+.vertical-menu {
+  .navbar-link {
+    padding: 6px 0;
+  }
+  ul.nav {
+    li.nav-item {
+      text-align: center;
+      width: 100%;
+      &.active {
+        a {
+          color: $blue-neon;
+          font-weight: bold;
+        }
+        [class^="icon_"], [class*=" icon_"], i
+        {
+          color: $blue-neon;
+        }
+      }
+      a {
+        color: #eee;
+        font-size: 13px;
+        &:hover {
+          background: none;
+          color: $blue-neon;
+          [class^="icon_"], [class*=" icon_"], i
+          {
+            color: $blue-neon;
+            transition: color .5s;
+          }
+        }
+        &:focus {
+          background: #555;
+        }
+      }
+    }
+  }
+}
+.v-menu-icon {
+  background: $blue-dark-03;
+  display: table;
+  margin: 0 auto;
+  margin-bottom: 5px; 
+  width: 55px;
+  height: 55px;
+  @include borderRadius(55px);
+  i {
+    display: table-cell;
+    vertical-align: middle;
+    transition: color 1s;
+  }
+}
+.navbar-toggle {
+  border: none;
+  @include borderRadius(0);
+  .icon-bar {
+    background: #fff;
+    height: 3px;
+  }
+}
+.contentWrapper {
+  margin-left: 100px;
+  padding-top: 75px;
+  @include clearfix();
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    height: 250px;
+    width: 100%;
+    z-index: -1;
+    @include linear-gradient(top, #fff, $blue-light-01);
+  }
+}
+.inner-wrapper {
+  padding: 10px 20px 40px;
+  height: calc(100vh - 75px);
+  overflow: auto;
+}
+// 使用者帳號區塊
+.nav-userinfo-bar {
+  background: $blue-dark-01;
+  display: block;
+  position: fixed;
+  height: 20px;
+  left: 100px;
+  width: calc(100% - 100px);
+  z-index: 3;
+  .nav-userinfo {
+    float: right;
+    letter-spacing: 1.3px;
+    //@include clearfix();
+  }
+  .nav-usermail {
+    color: #eee;
+    font-size: 12px;
+    float: left;
+  }
+  .nav-logout {
+    background: darkred;
+    color: #fff;
+    font-size: 12px;
+    float: left;
+    margin-left: 10px;
+    padding: 0 10px;
+    text-decoration: none;
+    &:hover {
+      background: red;
+      color: #eee;
+      text-decoration: none;
+    }
+  }
+}
+// 功能名稱區塊
+.page-title-header {
+  display: block;
+  height: 55px;
+  position: fixed;
+  top: 20px;
+  left: 100px;
+  width: calc(100% - 100px);
+  z-index: 3;
+  @include linear-gradient(left, $blue-dark-03, $blue-dark-01); 
+  .page-title {
+    color: #fff;
+    font-size: 32px;
+    font-weight: normal;
+    color: $blue-neon;
+    float: left;
+    margin: 0;
+    padding: 15px 15px 10px 25px;
+    a {
+      color: #a5a5a5;
+      margin-right: 36px;
+      position: relative;
+      &:hover {
+        color: #fff;
+        text-decoration: none;
+        border-bottom: none;
+      }
+      &:after {
+        content: '/';
+        color: #eee;
+        font-weight: 100;
+        position: absolute;
+        right: -24px;
+      }
+    }
+  }
+}
+.data-qry-wrap {
+  //background: #111;
+  float: right;
+  height: 55px;
+  padding: 5px 15px;
+  .bootstrap-select {
+    float: left;
+    height: 32px;
+    margin: 0 4px;
+    width: auto !important;
+    .dropdown-menu {
+      left: -1px;
+      padding: 0;
+      @include borderRadius(0px);
+      a {
+        padding: 8px 15px;
+        font-size: 16px;
+        &:hover {
+          background: $blue-neon;
+        }
+      }
+    }
+  }
+  a.btn {
+    padding: 10px 20px;
+    @include dropShadow(2px, 2px, 5px, 5px, $blue-dark-02);
+  }
+}
+.form-query {
+  //background: #eee;
+  padding: 15px;
+  position: absolute;
+  top: 55px;
+  right: 20px;
+  text-align: center;
+  @include borderRadius(5px);
+  select {
+    height: 36px;
+    margin: 0px 5px;
+    width: 80px;
+    @include borderRadius(0);
+  }
+  button {
+    height: 36px;
+    vertical-align: top;
+    @include borderRadius(5px);
+  }
+}
+.formWrap_center {
+  margin: 0 auto;
+  margin-top: 40px;
+  width: 50%;
+  input[type="text"],
+  input[type="password"],
+  input[type="search"],
+  input[type="date"],
+  textarea {
+    font-size: 16px;
+    font-weight: bold;
+    @include borderRadius(0);
+
+    &.input-5digit {
+      width: 5em;
+    }
+    &.input-date {
+      width: 10em;
+    }
+    &:disabled {
+      background: #eee;
+      color: #777;
+    }
+  }
+  .bootstrap-select {
+    .btn.disabled {
+      background: #eee;
+      color: #777 !important;
+      opacity: 1 !important;
+    }
+  }
+  .dropdown-toggle {
+    padding-top: 6px !important;
+    padding-bottom: 6px !important;
+  }
+  .dropdown-menu {
+    font-size: 16px;
+    & > .active {
+      & > a {
+        background: $blue-neon;
+        color: #000;
+        font-weight: bold;
+        &:focus,
+        &:hover {
+          background: $blue-neon;
+          color: #000;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+.input-group {
+  .form-control {
+    float: none;
+  }
+}
+
+// Table Styles
+.table>tbody>tr>td,
+.table>tbody>tr>th,
+.table>tfoot>tr>td,
+.table>tfoot>tr>th,
+.table>thead>tr>td,
+.table>thead>tr>th {
+  vertical-align: middle;
+}
+.table {
+  tr {
+    th,
+    td {
+      color: #333;
+      &:first-child {
+        //text-align: center;
+      }
+    }
+    th {
+      color: #555;
+      font-size: 13px;
+    }
+  }
+  a {
+    &[href=""] {
+      color: $blue-neon;
+    }
+  }
+}
+.table-serial {
+  th,td {
+    &.tdAmount {
+      text-align: right;
+    }
+  }
+}
+
+// Table Sorting Styles
+.dataTables_wrapper {
+  // padding-top: 64px;
+  position: relative;
+  .row {
+    // &:first-child {
+    //   background: #dff7ff;
+    //   padding: 10px 15px 5px;
+    // }
+    &:last-child {
+      border-top: 2px solid $blue-neon;
+      padding: 10px 15px 10px;
+    }
+  }
+}
+table.dataTable {
+  thead {
+    .sorting,
+    .sorting_asc,
+    .sorting_desc,
+    .sorting_asc_disabled,
+    .sorting_desc_disabled {
+      padding-right: 0 !important;
+      &:after {
+        display: inline;
+        margin-left: 16px;
+        position: relative;
+        left: auto;
+        bottom: auto;
+      }
+    }
+    .sorting_asc,
+    .sorting_desc {
+      color: $blue-neon;
+    }
+    th {
+      border-bottom: 2px solid $blue-neon;
+      color: $blue-dark-01;
+    }
+  }
+  tbody {
+    tr {
+      @include transition(all, .3s, linear);
+      &:hover {
+        //box-shadow: #ccc 0 1px 3px 3px;
+        background: $blue-light-01;
+      }
+    }
+    td {
+      color: #555;
+      font-weight: bold;
+    }
+  }
+
+}
+.table-row-expand {
+  @include linear-gradient(left, #FDF7E1, #FFE9C5);
+}
+.expand-detail-table {
+  margin: 0 auto;
+  width: 98%;
+  th,td {
+    font-size: 13px;
+    padding: 5px 10px;
+    &.aRight {
+      text-align: right;
+    }
+  }
+  th {
+    font-weight: normal;
+  }
+  tr {
+    &:hover {
+      box-shadow: none !important;
+    }
+  }
+  tr:not(:first-child) {
+    &:hover {
+      background: rgba(255,255,255,0.8);
+    }
+  }
+}
+.btn-open-panel {
+  background: url('../images/btn_round_more.svg') no-repeat;
+  display: block;
+  width: 30px;
+  height: 30px;
+  .shown & {
+    background: url('../images/btn_closepanel.svg') no-repeat;
+  }
+}
+tr.shown,
+tr.shown:hover {
+  background: #ffeea0 !important;
+}
+
+// --- 檢視筆數, 搜尋
+.dataTables_length,
+.dataTables_filter {
+  input,
+  select {
+    font-size: 16px;
+    @include borderRadius(0);
+  }
+}
+
+// --- 顯示筆數
+.dataTables_info {
+  font-family: "Arial Black";
+}
+.dataTables_paginate {}
+
+.pagination {
+  li {
+    a {
+      background: #ccc;
+      border: none;
+      color: #555;
+      font-weight: bold;
+      margin: 0 3px;
+      @include borderRadius(25px);
+      &:hover {
+        background: #ddd;
+        color: #111;
+      }
+    }
+  }
+  & >.active {
+    a,
+    a:focus,
+    a:hover {
+      background: $blue-neon;
+      color: $blue-dark-03;
+    }
+  }
+  & > li:first-child > a, 
+  & > li:last-child > a {
+    background: none;
+    color: $blue-dark-02;
+    font-family: Arial;
+    &:hover {
+      background: #eee;
+    }
+  }
+
+}
+
+// Modal Styles
+.modal-dialog {
+  margin-top: 100px;
+  //@include dropShadow(0, 1px, 5px, 0px, #666);
+  .btnCloseModal {
+    background: red;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 30px;
+    line-height: 1;
+    padding: 0 5px 5px;
+    position: absolute;
+    text-decoration: none;
+    left: 100%;
+    top: 0;
+  }
+}
+
+.modal-content {
+  border: none;
+  @include borderRadius(3px);
+  @include dropShadow(0px, 0px, 10px, 10px, rgba(100, 100, 100, .4));
+  @include linear-gradient(top, $blue-light-01, #fff);
+  textarea {
+    background: #eee !important;
+    border: none;
+    color: #111;
+    width: 100% !important;
+    @include borderRadius(1px);
+  }
+}
+.modal-header,
+.modal-body,
+.modal-footer {
+  background: none;
+}
+.modal-header {
+  border-bottom: none;
+  color: $blue-dark-01;
+  font-weight: bold;
+  font-size: 21px;
+  padding: 10px 15px 0; 
+  text-align: center;
+  .modal-title {
+    color: #fff;
+    font-size: 21px;
+  }
+}
+.modal-body {
+  font-size: 16px;
+  padding: 25px;
+}
+
+.modal-footer {
+  background: $blue-light-02;
+  border-top: none;
+  text-align: center;
+  padding: 10px 15px;
+  @include borderRadius(0px 0px 3px 3px);
+}
+
+// Datepicker
+.datepicker {
+  background-image: url('../images/icon-datepicker.svg') !important;
+  background-repeat: no-repeat !important;
+  background-position: right center !important;
+}
+.datepicker-btn {
+  background: url('../images/icon-datepicker.svg') no-repeat;
+  display: block;
+  float: left;
+  width: 30px;
+  height: 30px;
+}
+
+// Pagination
+.pagination > li:first-child > a, 
+.pagination > li:first-child > span,
+.pagination > li:last-child > a, 
+.pagination > li:last-child > span {
+	@include borderRadius(25px);
+}
+
+// Datepicker Global ------------------------//
+
+/* JQuery UI Calendar Customize */
+
+#ui-datepicker-div {
+  background-color: #fff6dd;
+  z-index: 999 !important;
+  @include borderRadius(0px);
+}
+
+.ui-widget-content {
+  background: #fefefe;
+  border: 1px solid #ccc;
+  @include dropShadow(0px, 0px, 3px, 0, #aaa);
+}
+
+.ui-widget-header {
+  //display: none;
+  background: none !important;
+  border: none !important;
+}
+
+.ui-datepicker {
+  font-family: Arial, sans-serif; 
+  //height: 300px;
+  //width: 100%;
+  table {
+    table-layout: fixed;
+    th,
+    td {
+      //padding: 5px 0;
+      width: calc(100%/7) !important;
+    }
+  }
+  .ui-datepicker-title {
+    line-height: auto;
+    line-height: 100% \9;
+    select {
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 24px;
+      font-family: Arial, sans-serif;
+      font-weight: bold;
+      margin: 0 6px !important;
+      padding: 0 10px;
+      width: auto;
+      @include borderRadius(0);
+      @include dropShadow(0, 0, 0, 0, transparent);
+      &:hover {
+        background: #eee;
+      }
+      &:first-child {
+        //border-right: 1px solid $blue-neon;
+      }
+    }
+  }
+}
+
+.ui-datepicker-year {
+  color: $blue-dark;
+  font-size: 24px;
+  font-weight: 100;
+  &:after {
+    content: ' /';
+  }
+}
+
+.ui-datepicker-month {
+  color: $blue-dark;
+  font-size: 23px;
+  font-weight: 100;
+  &:before {
+    content: '/ ';
+  }
+}
+
+.ui-datepicker-prev,
+.ui-datepicker-next {
+  background: none !important;
+  border: none !important;
+  cursor: pointer;
+  .ui-icon {
+    background: none !important;
+  }
+  &:before {
+    color: $blue-dark;
+    font-size: 24px;
+    font-weight: 100;
+    position: absolute;
+    top: 3px;
+  }
+}
+
+.ui-datepicker-prev {
+  &:before {
+    content: '<';
+    font-family: "Helvetica Neue";
+    font-weight: 200;
+    top: 0px;
+    left: 10px;
+  }
+}
+
+.ui-datepicker-next {
+  //background: none;
+  &:before {
+    content: '>';
+    font-family: "Helvetica Neue";
+    font-weight: 200;
+    top: 0px;
+    right: 10px;
+  }
+}
+
+.ui-datepicker-prev-hover,
+.ui-datepicker-next-hover {
+  top: 2px !important;
+}
+
+// 周六周日變色
+.ui-datepicker-calendar {
+  thead {
+    th {
+      font-family: "微軟正黑體", sans-serif;
+    }
+  }
+  tr {
+    th,
+    td {
+      a,
+      span {
+        color: #555 !important;
+      }
+      &:first-child {
+        a,
+        span {
+          color: #FF7979 !important;
+        }
+      }
+    }
+    th,
+    td {
+      &:last-child {
+        a,
+        span {
+          color: #417505 !important;
+        }
+      }
+    }
+  }
+}
+.ui-state-default {
+  background: none !important;
+  border: none !important;
+  text-align: center !important;
+  padding: 6px 0 !important;
+}
+.ui-state-active {
+  // background: #50E3C2 !important;
+  // @include borderRadius(25px);
+  font-weight: bold !important;
+}
+.ui-datepicker-current-day,
+.ui-datepicker-today {
+  @include borderRadius(25px);
+}
+.ui-datepicker-current-day {
+  background: #ffd84a !important;
+}
+.ui-datepicker-today {
+  background: rgba(220, 220, 220, .5) !important;
+}
+
+
+// Bootstrap Select
+.bootstrap-select {
+	border: 1px solid #ccc;
+	display: block;
+	width: 100% !important;
+}
+.bootstrap-select > .dropdown-toggle.bs-placeholder, 
+.bootstrap-select > .dropdown-toggle.bs-placeholder:active, 
+.bootstrap-select > .dropdown-toggle.bs-placeholder:focus, 
+.bootstrap-select > .dropdown-toggle.bs-placeholder:hover {
+	color: #111;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+// Bootstrap Tooltip
+.tooltip-inner {
+  font-size: 13px;
+  padding: 5px 8px;
+  @include borderRadius(1px);
+}
+
+// Loading Spinner Animation
+.loader-mask {
+  background: rgba(50,50,50,.8);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+/*LOADER BOX*/
+.loader {
+  height: 100vh;
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #a0a0a0;
+  position: relative;
+  svg {
+    animation: 1s linear spinBasic infinite;
+  }
+  p {
+    color: $blue-neon;
+    font-size: 13px;
+    margin-bottom: 0;
+    position: absolute;
+    span {
+      animation: .1s linear shine infinite;
+    }
+  }
+}
+
+@keyframes spinBasic {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+}
+@keyframes shine {
+    from {
+      opacity: 0.3;
+    }
+    to {
+      opacity: 1;
+    }
+}
+// 使用者權限 Table
+.permissionTable {
+  background: #fff;
+  font-size: 14px;
+  margin-bottom: 0;
+  tr {
+    th {
+      background: #eee;
+      color: #eee;
+      font-weight: bold;
+      font-size: 16px;
+      text-align: center;
+    }
+    &.tableSubHeader {
+      background: #eee;
+      td {
+        font-size: 18px;
+        font-weight: bold;
+      }
+    }
+    td {
+      &:first-child {
+        font-weight: bold;
+        text-align: left;
+      }
+      text-align: center;
+      .tableSubLabel {
+        display: block;
+        font-weight: normal;
+        font-size: 13px;
+      }
+    }
+  }
+  .perTableHeader-1 {
+    background-color: $blue-dark-02;
+  }
+  .perTableHeader-2 {
+    background-color: $blue-dark-01;
+  }
+  .perTableHeader-1-1 {
+    background-color: #37c5e2;
+    color: #fff;
+  }
+  .perTableHeader-1-2 {
+    background-color: #e2b353;
+    color: #fff;
+  }
+  .perTableHeader-2-1 {
+    background-color: #ea4a6d;
+    color: #fff;
+  }
+  .perTableHeader-2-2 {
+    background-color: #32c3a1;
+    color: #fff;
+  }
+}
+
+.badge {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: normal;
+  margin-bottom: 3px;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+  &.nty-published {
+    background-color: #37c5e2;
+  }
+  &.nty-draft {
+    background-color: #999999;
+  }
+  &.nty-scheduled {
+    background-color: #f7af67;
+  }
+  &.mgr-all {
+    background-color: #37c5e2;
+    width: 85px;
+  }
+  &.mgr-cus {
+    background-color: #e2b353;
+    width: 85px;
+  }
+  &.mgr-sup {
+    background-color: #ea4a6d;
+    width: 85px;
+  }
+  &.mgr-nor {
+    background-color: #32c3a1;
+    width: 85px;
+  }
+}
+
+.btn-permissionDetail {
+  background: #ddd;
+  border-radius: 10px;
+  color: $blue-dark-01;
+  display: inline-block;
+  font-size: 12px;
+  height: 20px;
+  text-align: center;
+  text-decoration: none;
+  padding: 0 10px;
+  &:hover {
+    background: #bbb;
+    color: #000;
+    text-decoration: none;
+  }
+  &:focus {
+    text-decoration: none;
+  }
+}
+
+// Error Page
+.errorPageWrapper {
+  background: $blue-dark-03;
+  text-align: center;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  h2 {
+    font-size: 28px;
+  }
+  .admin-error-sign {
+    width: 250px;
+    height: 240px;
+  }
+  p {
+    color: #eee;
+    font-size: 24px;
+    margin-bottom: 32px;
+  }
+  .btn {
+    width: 200px;
+  }
+}
+

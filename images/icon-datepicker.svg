@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>Artboard</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" fill-rule="nonzero">
+            <g id="icon-datepicker" transform="translate(2.000000, 2.000000)">
+                <rect id="Rectangle-297" fill="#D8D8D8" x="0" y="0" width="18" height="18"></rect>
+                <rect id="Rectangle-297-Copy" fill="#EEF1EF" x="0" y="0" width="18" height="17"></rect>
+                <rect id="Rectangle-297" fill="#D0D0D0" x="0" y="0" width="18" height="4"></rect>
+                <rect id="Rectangle-299" fill="#C2C2C2" x="0" y="3" width="18" height="1"></rect>
+                <rect id="Rectangle-301" fill="#A2A2A2" x="0" y="4" width="18" height="1"></rect>
+                <rect id="Rectangle-302" fill="#BBBBBB" x="2" y="7" width="2" height="2"></rect>
+                <rect id="Rectangle-302-Copy-4" fill="#BBBBBB" x="2" y="10" width="2" height="2"></rect>
+                <rect id="Rectangle-302-Copy-8" fill="#BBBBBB" x="2" y="13" width="2" height="2"></rect>
+                <rect id="Rectangle-302-Copy" fill="#BBBBBB" x="6" y="7" width="2" height="2"></rect>
+                <rect id="Rectangle-302-Copy-5" fill="#BBBBBB" x="6" y="10" width="2" height="2"></rect>
+                <rect id="Rectangle-302-Copy-9" fill="#BBBBBB" x="6" y="13" width="2" height="2"></rect>
+                <rect id="Rectangle-302-Copy-2" fill="#BBBBBB" x="10" y="7" width="2" height="2"></rect>
+                <rect id="Rectangle-302-Copy-6" fill="#BBBBBB" x="10" y="10" width="2" height="2"></rect>
+                <rect id="Rectangle-302-Copy-10" fill="#BBBBBB" x="10" y="13" width="2" height="2"></rect>
+                <rect id="Rectangle-302-Copy-3" fill="#BBBBBB" x="14" y="7" width="2" height="2"></rect>
+                <rect id="Rectangle-302-Copy-7" fill="#BBBBBB" x="14" y="10" width="2" height="2"></rect>
+                <rect id="Rectangle-302-Copy-11" fill="#BBBBBB" x="14" y="13" width="2" height="2"></rect>
+                <path d="M9,2 C9,2.5523893 8.77619465,3 8.5,3 C8.22380535,3 8,2.5523893 8,2 C8,1.4476107 8.22380535,1 8.5,1 C8.77619465,1 9,1.4476107 9,2" id="Fill-8-Copy" fill="#3ECBDF"></path>
+                <path d="M10,2 C10,2.5523893 9.5523893,3 9,3 C8.4476107,3 8,2.5523893 8,2 C8,1.4476107 8.4476107,1 9,1 C9.5523893,1 10,1.4476107 10,2" id="Fill-9-Copy" fill="#535353"></path>
+            </g>
+        </g>
+    </g>
+</svg>

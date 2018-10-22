@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="37px" height="37px" viewBox="0 0 37 37" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.1 (67048) - http://www.bohemiancoding.com/sketch -->
+    <title>SPLA/btn_round_priceList</title>
+    <desc>Created with Sketch.</desc>
+    <g id="SPLA/btn_round_priceList" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <circle id="Oval-3" fill="#AA6A00" cx="18.5" cy="18.5" r="18.5"></circle>
+        <rect id="Rectangle-20" fill="#FFFFFF" x="22.3684211" y="10.1052632" width="6.63157895" height="3.31578947"></rect>
+        <rect id="Rectangle-20" fill="#FFFFFF" x="24.5789474" y="16.7368421" width="4.42105263" height="3.31578947"></rect>
+        <rect id="Rectangle-20" fill="#FFFFFF" x="22.3684211" y="23.3684211" width="6.63157895" height="3.31578947"></rect>
+        <path d="M15.5,13.038866 L15.5,16.6565224 C17.9836682,17.0554768 20.26,17.8733481 20.26,20.88 C20.26,23.58 18,25.1 15.52,25.28 L15.52,27.28 L12.98,27.28 L12.98,25.38 C10.74,25.18 8.66,24.16 7.72,21.96 L10.08,20.96 C10.5054089,21.9683766 11.7003862,22.6912681 13,22.9526631 L13,18.7356351 C10.5213732,18.3838071 8.34,17.6503808 8.34,14.72 C8.34,12.1 10.66,10.9 12.98,10.62 L12.98,8.88 L15.52,8.88 L15.52,10.62 C17.22,10.88 18.78,11.52 19.68,13.36 L17.52,14.36 C17.1714988,13.7836327 16.3918033,13.2970975 15.5,13.038866 Z M15.5,19.1229042 L15.5,22.9084732 C16.6566181,22.641198 17.52,22.0050505 17.52,20.88 C17.52,19.9341012 16.667588,19.4195435 15.5,19.1229042 Z M13,16.3059022 L13,12.927024 C11.8440292,13.119718 10.96,13.6523238 10.96,14.72 C10.96,15.7094633 11.8477867,16.0920851 13,16.3059022 Z" id="Combined-Shape" fill="#FFFFFF"></path>
+    </g>
+</svg>
