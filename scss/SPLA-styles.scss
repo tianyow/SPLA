@@ -402,6 +402,7 @@ input[type=radio] {
   padding: 10px 20px 40px;
   height: calc(100vh - 75px);
   overflow: auto;
+  position: relative;
 }
 // 使用者帳號區塊
 .nav-userinfo-bar {
@@ -615,6 +616,9 @@ input[type=radio] {
       text-align: right;
     }
   }
+}
+.table-smallfont {
+  font-size: 13px;
 }
 
 // Table Sorting Styles
@@ -1152,7 +1156,7 @@ tr.shown:hover {
 
 .badge {
   display: inline-block;
-  font-size: 12px;
+  font-size: 13px;
   font-weight: normal;
   margin-bottom: 3px;
   -webkit-border-radius: 0px;
@@ -1169,19 +1173,19 @@ tr.shown:hover {
   }
   &.mgr-all {
     background-color: #37c5e2;
-    width: 85px;
+    width: 65px;
   }
   &.mgr-cus {
     background-color: #e2b353;
-    width: 85px;
+    width: 65px;
   }
   &.mgr-sup {
     background-color: #ea4a6d;
-    width: 85px;
+    width: 65px;
   }
   &.mgr-nor {
     background-color: #32c3a1;
-    width: 85px;
+    width: 65px;
   }
 }
 
@@ -1231,3 +1235,46 @@ tr.shown:hover {
   }
 }
 
+// 產品資訊
+.productInfoTabWrap {
+  &::before {
+      content: "";
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      left: 0px;
+      height: 55px;
+      background: $blue-gradientBtn-01;
+  }
+  .nav-tabs {
+    border: none;
+    & > li {
+      a {
+        border: none;
+        border-radius: 0;
+        font-size: 18px;
+        padding: 10px 25px;
+        &:focus, &:hover {
+          border: none;
+          border-radius: 0;
+        }
+      }
+      &.active {
+        a {
+          color:  $blue-gradientBtn-01;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+.productInfoSearch {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  input {
+    float: left;
+    height: 34px;
+    padding: 0 10px;
+  }
+}

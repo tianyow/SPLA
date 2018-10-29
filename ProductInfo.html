@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>北祥 SPLA Monthly Report Portal</title>
+  <link rel="SHORTCUT ICON" href="" />
+  <!-- css -->
+  <link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="vendor/bootstrap-select/css/bootstrap-select.min.css">
+  <link rel="stylesheet" href="vendor/DataTables/datatables.min.css"/>
+  <link rel="stylesheet" href="css/SPLA-styles.css">
+</head>
+
+<body>
+  <nav id="SPLA-navbar" class="navbar-vertical">
+    <div href="#"><img src="images/SPLA-logo.svg" alt=""></div>
+    <div class="vertical-menu">
+      <ul class="nav navbar-nav">
+        <li class="nav-item">
+          <a href="#">
+            <span class="v-menu-icon"><i class="icon_chart_report"></i></span>
+            <span class="navbar-link">用量報表</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#">
+            <span class="v-menu-icon"><i class="icon_user_info"></i></span>
+            <span class="navbar-link">客戶資訊</span>
+          </a>
+        </li>
+        <li class="nav-item active">
+          <a href="ProductInfo.html">
+            <span class="v-menu-icon"><i class="icon_product_info"></i></span>
+            <span class="navbar-link">產品資訊</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="MemberManagement_Qry.html">
+            <span class="v-menu-icon"><i class="icon_member_management"></i></span>
+            <span class="navbar-link">人員管理</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#">
+            <span class="v-menu-icon"><i class="icon_history_report"></i></span>
+            <span class="navbar-link">歷史報表</span>
+          </a>
+        </li>
+      </ul>
+    </div><!-- /.vertical-menu -->
+  </nav><!-- / #admin-navbar -->
+
+  <div class="nav-userinfo-bar">
+    <div class="nav-userinfo">
+      <div class="nav-usermail">admin01@pershing.onmicrosoft.com</div>
+      <a class="nav-logout" href="" data-toggle="modal" data-target="#msg-logout">登出</a>
+    </div><!-- /.nav-userinfo -->
+  </div><!-- /.nav-userinfo-bar -->
+
+  <div class="page-title-header">
+    <h2 class="page-title">產品資訊 <span>(2018/12)</span></h2>
+    <div class="data-qry-wrap">
+      <a href="" class="btn btn-gradient btn-round" data-toggle="modal" data-target="#file-upload"><img src="images/btn-icon-add.png" alt="" width="18">上傳</a>
+    </div><!-- /.data-qry-wrap -->
+  </div><!-- /.page-title-header -->
+
+  <div class="contentWrapper">
+    <div class="inner-wrapper">
+
+      <div class="productInfoTabWrap">
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs" role="tablist">
+          <li role="presentation" class="active"><a href="#pricebook" aria-controls="pricebook" role="tab" data-toggle="tab">價格冊</a></li>
+          <li role="presentation"><a href="#othersetting" aria-controls="othersetting" role="tab" data-toggle="tab">其他設定</a></li>
+        </ul>
+        <!-- Tab panes -->
+        <div class="tab-content">
+          <div role="tabpanel" class="tab-pane active" id="pricebook">
+
+            <div class="productInfoSearch">
+              <input type="text">
+              <button class="btn btn-gradient-blue">搜尋</button>
+            </div>
+
+            <div class="table-responsive">
+              <table id="AppQryTable" class="table table-hover table-serial table-smallfont table-responsive">
+                <thead>
+                  <tr>
+                    <th>產品編號</th>
+                    <th>產品名稱</th>
+                    <th>Item Legal Name</th>
+                    <th>Type</th>
+                    <th class="tdAmount">台幣經銷價</th>
+                    <th class="tdAmount">美金成本</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>SMD-00001</td>
+                    <td>ExchgBacSAL ALNG LicSAPk MVL</td>
+                    <td>Microsoft ExchangeBasic SAL AllLing License/SoftwareAssurancePack MCL License</td>
+                    <td>Corporate</td>
+                    <td class="tdAmount">30,000</td>
+                    <td class="tdAmount">100</td>
+                  </tr>
+                  <tr>
+                    <td>SMD-00001</td>
+                    <td>ExchgBacSAL ALNG LicSAPk MVL</td>
+                    <td>Microsoft ExchangeBasic SAL AllLing License/SoftwareAssurancePack MCL License</td>
+                    <td>Education</td>
+                    <td class="tdAmount">30,000</td>
+                    <td class="tdAmount">100</td>
+                  </tr>
+                  <tr>
+                    <td>SMD-00001</td>
+                    <td>ExchgBacSAL ALNG LicSAPk MVL</td>
+                    <td>Microsoft ExchangeBasic SAL AllLing License/SoftwareAssurancePack MCL License</td>
+                    <td>Corporate</td>
+                    <td class="tdAmount">30,000</td>
+                    <td class="tdAmount">100</td>
+                  </tr>
+                  <tr>
+                    <td>SMD-00001</td>
+                    <td>ExchgBacSAL ALNG LicSAPk MVL</td>
+                    <td>Microsoft ExchangeBasic SAL AllLing License/SoftwareAssurancePack MCL License</td>
+                    <td>Education</td>
+                    <td class="tdAmount">30,000</td>
+                    <td class="tdAmount">100</td>
+                  </tr>
+                  <tr>
+                    <td>SMD-00001</td>
+                    <td>ExchgBacSAL ALNG LicSAPk MVL</td>
+                    <td>Microsoft ExchangeBasic SAL AllLing License/SoftwareAssurancePack MCL License</td>
+                    <td>Corporate</td>
+                    <td class="tdAmount">30,000</td>
+                    <td class="tdAmount">100</td>
+                  </tr>
+                  <tr>
+                    <td>SMD-00001</td>
+                    <td>ExchgBacSAL ALNG LicSAPk MVL</td>
+                    <td>Microsoft ExchangeBasic SAL AllLing License/SoftwareAssurancePack MCL License</td>
+                    <td>Education</td>
+                    <td class="tdAmount">30,000</td>
+                    <td class="tdAmount">100</td>
+                  </tr>
+
+                </tbody>
+              </table>
+            </div><!-- /.table-responsive -->
+            
+          </div><!-- / #pricebook -->
+          <div role="tabpanel" class="tab-pane" id="othersetting">
+            <div class="formWrap_center">
+              <form action="">
+                <div class="form-group">
+                  <label for="dollar-rate">美金匯率</label>
+                  <input class="form-control" id="dollar-rate" name="" type="text" value="" />
+                  <span class="field-validation-valid text-danger"></span>
+                </div>
+                <div class="form-group btn-wrap">
+                  <a class="btn btn-round btn-gradient-blue btn-lg">儲存</a>
+                  <a class="btn btn-round btn-gradient-gray btn-lg" href="MemberManagement_Qry.html">取消</a>
+                </div>
+              </form>
+            </div>
+
+
+
+          </div><!-- / #othersetting -->
+        </div><!-- /.tab-content -->
+
+      </div><!-- /.productInfoTabWrap -->
+
+     
+    </div><!-- /.container-->
+
+  </div><!-- /.contentWrapper -->
+
+  <!-- modal: 重置密碼 -->
+  <div class="modal fade" id="reset-pwd" role="dialog">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-header">重置密碼</div>
+        <div id="message-sm-body" class="modal-body align-center">
+          將驗證密碼發送到郵件<br>x******@xxxxxx.xxx.xx?
+        </div>
+        <div class="modal-footer">
+          <a href="" class="btn btn-gradient btn-lg">確定</a>
+          <button type="button" class="btn btn-gradient-gray btn-lg" data-dismiss="modal" onclick="clearShowMessage();">取消</button>
+        </div>
+      </div>
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+
+  <!-- modal: 上傳 -->
+    <div class="modal fade" id="file-upload" role="dialog">
+      <div class="modal-dialog" style="width: 480px;">
+        <div class="modal-content">
+          <div class="modal-header">價格冊上傳</div>
+          <div id="message-sm-body" class="modal-body align-center">
+            <input type="file">
+          </div>
+          <div class="modal-footer">
+            <a href="index.html" class="btn btn-gradient btn-lg">上傳</a>
+            <button type="button" class="btn btn btn-gradient-gray btn-lg" data-dismiss="modal" onclick="clearShowMessage();">取消</button>
+          </div>
+        </div>
+        <!-- <a class="btnCloseModal" data-dismiss="modal">&times;</a> -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+  <!-- modal: 登出 -->
+    <div class="modal fade" id="msg-logout" role="dialog">
+      <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+          <div class="modal-header"></div>
+          <div id="message-sm-body" class="modal-body align-center">
+            確定要登出嗎?
+          </div>
+          <div class="modal-footer">
+            <a href="index.html" class="btn btn-gradient btn-lg">確定</a>
+            <button type="button" class="btn btn btn-gradient-gray btn-lg" data-dismiss="modal" onclick="clearShowMessage();">取消</button>
+          </div>
+        </div>
+        <!-- <a class="btnCloseModal" data-dismiss="modal">&times;</a> -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+  <!-- script -->
+  <script src="vendor/jquery/dist/jquery.min.js"></script>
+  <script src="vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="vendor/bootstrap-select/js/bootstrap-select.min.js"></script>
+  <script src="vendor/DataTables/datatables.min.js"></script>
+  <script src="js/SPLA-scripts.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('#AppQryTable').DataTable(qryTableOptions);
+      $('.selectpicker').selectpicker({});
+
+      // $('#ProductInfoTabs a').click(function (e) {
+      //   e.preventDefault()
+      //   $(this).tab('show')
+      // })
+
+    });
+  </script>
+
+</body>
+
+</html>

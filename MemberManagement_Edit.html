@@ -21,19 +21,19 @@
     <div class="vertical-menu">
       <ul class="nav navbar-nav">
         <li class="nav-item">
-          <a href="UsageReport_Qry.html">
+          <a href="#">
             <span class="v-menu-icon"><i class="icon_chart_report"></i></span>
             <span class="navbar-link">用量報表</span>
           </a>
         </li>
         <li class="nav-item">
-          <a href="Billing_Qry.html">
+          <a href="#">
             <span class="v-menu-icon"><i class="icon_user_info"></i></span>
             <span class="navbar-link">客戶資訊</span>
           </a>
         </li>
         <li class="nav-item">
-          <a href="Customer_Qry.html">
+          <a href="ProductInfo.html">
             <span class="v-menu-icon"><i class="icon_product_info"></i></span>
             <span class="navbar-link">產品資訊</span>
           </a>
@@ -41,7 +41,13 @@
         <li class="nav-item active">
           <a href="MemberManagement_Qry.html">
             <span class="v-menu-icon"><i class="icon_member_management"></i></span>
-            <span class="navbar-link" >人員管理</span>
+            <span class="navbar-link">人員管理</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#">
+            <span class="v-menu-icon"><i class="icon_history_report"></i></span>
+            <span class="navbar-link">歷史報表</span>
           </a>
         </li>
       </ul>
@@ -152,7 +158,7 @@
     <!-- Modal: 使用者權限 -->
     <div id="PermissionDetail" class="modal fade" tabindex="-1" role="dialog">
       <!-- /.權限說明  -->
-      <div class="modal-dialog"  style="width: 80%;">
+      <div class="modal-dialog"  style="width: 60%;">
         <!-- Modal content-->
         <div class="modal-content">
           <div class="modal-header">
@@ -164,90 +170,83 @@
               <thead>
                 <tr>
                   <th></th>
-                  <th class="perTableHeader-1" colspan="2">SPLA Portal 管理者</th>
-                  <th class="perTableHeader-2" colspan="2">客戶管理者</th>
+                  <th class="perTableHeader-1" colspan="2">北祥管理者</th>
+                  <th class="perTableHeader-2">客戶管理者</th>
                 </tr>
               </thead>
               <tbody>
                 <tr class="tableSubHeader">
                   <td></td>
-                  <td class="perTableHeader-1-1">全域管理者</td>
-                  <td class="perTableHeader-1-2">客服管理者</td>
-                  <td class="perTableHeader-2-1">超級管理者<span class="tableSubLabel">(SuperAdmin)</span></td>
-                  <td class="perTableHeader-2-2">一般管理者<span class="tableSubLabel">(Admin)</span></td>
+                  <td class="perTableHeader-1-1" width="27%">全域管理者</td>
+                  <td class="perTableHeader-1-2" width="27%">客服管理者</td>
+                  <td class="perTableHeader-2-2" width="27%">一般管理者</td>
                 </tr>
                 <tr>
-                  <td width="">使用量<span class="tableSubLabel">(檢視)</span></td>
-                  <td width="26%"><img src="images/table-check.png" alt="" width="36"></td>
-                  <td width="26%"><img src="images/table-check.png" alt="" width="36"></td>
-                  <td width="18%"><img src="images/table-check.png" alt="" width="36"></td>
-                  <td width="18%"><img src="images/table-check.png" alt="" width="36"></td>
+                  <td width="">用量回報<span class="tableSubLabel">(編輯)</span></td>
+                  <td></td>
+                  <td></td>
+                  <td><img src="images/table-check.png" alt="" width="36"></td>
                 </tr>
                 <tr>
-                  <td>費用報表<span class="tableSubLabel">(檢視/下載)</span></td>
+                  <td>歷史紀錄<span class="tableSubLabel">(檢視)</span></td>
+                  <td></td>
+                  <td></td>
+                  <td><img src="images/table-check.png" alt="" width="36"></td>
+                </tr>
+                <tr>
+                  <td>用量報表<span class="tableSubLabel">(編輯、檢視、下載)</span></td>
                   <td><img src="images/table-check.png" alt="" width="36"></td>
                   <td><img src="images/table-check.png" alt="" width="36"></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>產品資訊<span class="tableSubLabel">(編輯、檢視)</span></td>
+                  <td><img src="images/table-check.png" alt="" width="36"></td>
+                  <td><img src="images/table-check.png" alt="" width="36"><span class="tableSubLabel">(僅檢視)</span></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td colspan="4">客戶資訊</td>
+                </tr>
+                <tr>
+                  <td class="align-right">基本資料<span class="tableSubLabel">(編輯)</span></td>
+                  <td><img src="images/table-check.png" alt="" width="36"></td>
+                  <td><img src="images/table-check.png" alt="" width="36"></td>
+                  <td><img src="images/table-check.png" alt="" width="36"><span class="tableSubLabel">(部分可編輯)</span></td>
+                </tr>
+                <tr>
+                  <td class="align-right">報價品項<span class="tableSubLabel">(編輯)</span></td>
+                  <td><img src="images/table-check.png" alt="" width="36"></td>
                   <td><img src="images/table-check.png" alt="" width="36"></td>
                   <td></td>
                 </tr>
                 <tr>
-                  <td>客戶資訊<span class="tableSubLabel">(新增/編輯/刪除)</span></td>
-                  <td><img src="images/table-check.png" alt="" width="36"></td>
-                  <td></td>
-                  <td></td>
+                  <td colspan="4">人員管理</td>
+                </tr>
+                <tr>
+                  <td class="align-right">新增</td>
+                  <td>
+                    <span class="badge mgr-all">全域</span>
+                    <span class="badge mgr-cus">客服</span>
+                    <span class="badge mgr-nor">一般</span>
+                  </td>
+                  <td>
+                    <span class="badge mgr-cus">客服</span>
+                    <span class="badge mgr-nor">一般</span>
+                  </td>
                   <td></td>
                 </tr>
                 <tr>
-                  <td colspan="5">人員管理</td>
-                </tr>
-                <tr>
-                  <td class="align-right"><span class="tableSubLabel">新增</span></td>
+                  <td class="align-right">修改</td>
                   <td>
-                    <span class="badge mgr-all">全域管理者</span>
-                    <span class="badge mgr-cus">客服管理者</span>
-                    <span class="badge mgr-sup">超級管理者</span>
-                    <span class="badge mgr-nor">一般管理者</span>
+                    <span class="badge mgr-all">全域</span>
+                    <span class="badge mgr-cus">客服</span>
+                    <span class="badge mgr-nor">一般</span>
                   </td>
                   <td>
-                    <span class="badge mgr-sup">超級管理者</span>
-                    <span class="badge mgr-nor">一般管理者</span>
+                    <span class="badge mgr-cus">客服</span>
+                    <span class="badge mgr-nor">一般</span>
                   </td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td class="align-right"><span class="tableSubLabel">刪除</span></td>
-                  <td>
-                    <span class="badge mgr-all">全域管理者*</span>
-                    <span class="badge mgr-cus">客服管理者</span>
-                    <span class="badge mgr-sup">超級管理者</span>
-                    <span class="badge mgr-nor">一般管理者</span>
-                    <div class="pscript">*預設全域管理者不能被其他全域管理者刪除<br>*預設超級管理者無法被刪除</div>
-                  </td>
-                  <td>
-                    <span class="badge mgr-sup">超級管理者</span>
-                    <span class="badge mgr-nor">一般管理者</span>
-                  </td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td class="align-right"><span class="tableSubLabel">編輯</span></td>
-                  <td>
-                    <span class="badge mgr-cus">客服管理者</span> → <span class="badge mgr-all">全域管理者</span><br>
-                    <span class="badge mgr-sup">超級管理者</span> ↔ <span class="badge mgr-nor">一般管理者</span>
-                  </td>
-                  <td>
-                    <span class="badge mgr-sup">超級管理者</span> ↔ <span class="badge mgr-nor">一般管理者</span>
-                  </td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td>其他設定</td>
-                  <td><img src="images/table-check.png" alt="" width="36"></td>
-                  <td></td>
-                  <td></td>
                   <td></td>
                 </tr>
               </tbody>

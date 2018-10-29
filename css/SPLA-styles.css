@@ -466,6 +466,7 @@ input[type=radio]:checked + label {
   padding: 10px 20px 40px;
   height: calc(100vh - 75px);
   overflow: auto;
+  position: relative;
 }
 
 .nav-userinfo-bar {
@@ -695,6 +696,10 @@ input[type=radio]:checked + label {
 
 .table-serial th.tdAmount, .table-serial td.tdAmount {
   text-align: right;
+}
+
+.table-smallfont {
+  font-size: 13px;
 }
 
 .dataTables_wrapper {
@@ -1236,7 +1241,7 @@ tr.shown:hover {
 
 .badge {
   display: inline-block;
-  font-size: 12px;
+  font-size: 13px;
   font-weight: normal;
   margin-bottom: 3px;
   -webkit-border-radius: 0px;
@@ -1254,19 +1259,19 @@ tr.shown:hover {
 }
 .badge.mgr-all {
   background-color: #37c5e2;
-  width: 85px;
+  width: 65px;
 }
 .badge.mgr-cus {
   background-color: #e2b353;
-  width: 85px;
+  width: 65px;
 }
 .badge.mgr-sup {
   background-color: #ea4a6d;
-  width: 85px;
+  width: 65px;
 }
 .badge.mgr-nor {
   background-color: #32c3a1;
-  width: 85px;
+  width: 65px;
 }
 
 .btn-permissionDetail {
@@ -1312,6 +1317,44 @@ tr.shown:hover {
 }
 .errorPageWrapper .btn {
   width: 200px;
+}
+
+.productInfoTabWrap::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  left: 0px;
+  height: 55px;
+  background: #00cfff;
+}
+.productInfoTabWrap .nav-tabs {
+  border: none;
+}
+.productInfoTabWrap .nav-tabs > li a {
+  border: none;
+  border-radius: 0;
+  font-size: 18px;
+  padding: 10px 25px;
+}
+.productInfoTabWrap .nav-tabs > li a:focus, .productInfoTabWrap .nav-tabs > li a:hover {
+  border: none;
+  border-radius: 0;
+}
+.productInfoTabWrap .nav-tabs > li.active a {
+  color: #00cfff;
+  font-weight: bold;
+}
+
+.productInfoSearch {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+}
+.productInfoSearch input {
+  float: left;
+  height: 34px;
+  padding: 0 10px;
 }
 
 /*# sourceMappingURL=SPLA-styles.css.map */
