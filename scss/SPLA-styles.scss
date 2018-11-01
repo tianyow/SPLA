@@ -230,6 +230,7 @@ input[type=radio] {
     cursor: pointer;
     color: #666;
     padding: 6px 25px;
+    text-align: center;
     &:hover {
       background: #ddd;
     }
@@ -419,18 +420,39 @@ input[type=radio] {
     //@include clearfix();
   }
   .nav-usermail {
-    color: #eee;
-    font-size: 12px;
     float: left;
+    line-height: 1;
+    padding: 2px 10px;
+    text-decoration: none;
+    a {
+      color: #ddd;
+      font-size: 12px;
+      text-decoration: none;
+      &::before {
+        content: '';
+        background: url('../images/icon_change_pwd.png');
+        background-size: cover;
+        display: block;
+        float: left;
+        width: 16px;
+        height: 16px;
+        margin-right: 5px;
+      }
+    }
+    &:hover {
+      background: $blue-dark-03;
+      transition: .5s;
+      a {
+        color: #fff;
+      }
+    }
   }
   .nav-logout {
     background: darkred;
     color: #fff;
     font-size: 12px;
     float: left;
-    margin-left: 10px;
-    padding: 0 10px;
-    text-decoration: none;
+    padding: 2px 10px;
     &:hover {
       background: red;
       color: #eee;
@@ -523,61 +545,107 @@ input[type=radio] {
     @include borderRadius(5px);
   }
 }
-.formWrap_center {
-  margin: 0 auto;
-  margin-top: 40px;
-  width: 50%;
-  input[type="text"],
-  input[type="password"],
-  input[type="search"],
-  input[type="date"],
-  textarea {
-    font-size: 16px;
-    font-weight: bold;
-    @include borderRadius(0);
+// Input Default Styles
+input[type="text"],
+input[type="password"],
+input[type="search"],
+input[type="date"],
+textarea, textarea.form-control {
+  border: 1px solid #ccc;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 3px 10px;
+  width: auto;
+  max-width: 70%;
+  @include borderRadius(0);
 
-    &.input-5digit {
-      width: 5em;
-    }
-    &.input-date {
-      width: 10em;
-    }
-    &:disabled {
-      background: #eee;
-      color: #777;
-    }
+  &.input-date {
+    width: 10em;
   }
-  .bootstrap-select {
-    .btn.disabled {
-      background: #eee;
-      color: #777 !important;
-      opacity: 1 !important;
-    }
+  &:disabled {
+    background: #eee;
+    color: #777;
   }
-  .dropdown-toggle {
-    padding-top: 6px !important;
-    padding-bottom: 6px !important;
+}
+.bootstrap-select {
+  width: auto !important;
+  .btn.disabled {
+    background: #eee;
+    color: #777 !important;
+    opacity: 1 !important;
   }
-  .dropdown-menu {
-    font-size: 16px;
-    & > .active {
-      & > a {
+}
+.dropdown-toggle {
+  padding-top: 6px !important;
+  padding-bottom: 6px !important;
+}
+.dropdown-menu {
+  font-size: 16px;
+  & > .active {
+    & > a {
+      background: $blue-neon;
+      color: #000;
+      font-weight: bold;
+      &:focus,
+      &:hover {
         background: $blue-neon;
         color: #000;
         font-weight: bold;
-        &:focus,
-        &:hover {
-          background: $blue-neon;
-          color: #000;
-          font-weight: bold;
-        }
       }
     }
   }
 }
+
+// 表單- Normal
+.formWrap {
+  text-align: left;
+  label {
+    width: 20%;
+  }
+  input {
+    //width: 70%;
+  } 
+}
+// 表單- 置中
+.formWrap_center {
+  margin: 0 auto;
+  margin-top: 40px;
+  width: 50%;
+  textarea, textarea.form-control {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .bootstrap-select {
+    width: 100% !important;
+  }
+  
+}
 .input-group {
   .form-control {
     float: none;
+  }
+}
+
+// 表單- Label 置左
+.formWrap_label_inline {
+  margin: 0 auto;
+  margin-top: 20px;
+  width: 80%;
+  .form-group {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    text-align: left;
+    @include clearfix();
+    &:not(:last-child) {
+      border-bottom: 1px dotted #ddd;
+    }
+  }
+  label {
+    display: inline;
+    float: left;
+    width: 240px;
+    padding-top: 5px;
   }
 }
 
@@ -1031,7 +1099,7 @@ tr.shown:hover {
 .bootstrap-select {
 	border: 1px solid #ccc;
 	display: block;
-	width: 100% !important;
+	//width: 100% !important;
 }
 .bootstrap-select > .dropdown-toggle.bs-placeholder, 
 .bootstrap-select > .dropdown-toggle.bs-placeholder:active, 
@@ -1272,6 +1340,18 @@ tr.shown:hover {
   position: absolute;
   top: 10px;
   right: 20px;
+  input {
+    float: left;
+    height: 34px;
+    padding: 0 10px;
+  }
+}
+.customerInfoSearch {
+  position: absolute;
+  top: 10px;
+  right: 160px;
+}
+.productInfoSearch, .customerInfoSearch {
   input {
     float: left;
     height: 34px;

@@ -24,7 +24,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a href="#">
+          <a href="CustomerInfo_Qry.html">
             <span class="v-menu-icon"><i class="icon_user_info"></i></span>
             <span class="navbar-link">客戶資訊</span>
           </a>
@@ -53,7 +53,7 @@
 
   <div class="nav-userinfo-bar">
     <div class="nav-userinfo">
-      <div class="nav-usermail">admin01@pershing.onmicrosoft.com</div>
+      <div class="nav-usermail"><a href="#">admin01@pershing.onmicrosoft.com</a></div>
       <a class="nav-logout" href="" data-toggle="modal" data-target="#msg-logout">登出</a>
     </div><!-- /.nav-userinfo -->
   </div><!-- /.nav-userinfo-bar -->
@@ -84,7 +84,7 @@
             </div>
 
             <div class="table-responsive">
-              <table id="AppQryTable" class="table table-hover table-serial table-smallfont table-responsive">
+              <table id="AppQryTable" class="table table-hover table-serial table-smallfont">
                 <thead>
                   <tr>
                     <th>產品編號</th>
@@ -160,7 +160,7 @@
                 </div>
                 <div class="form-group btn-wrap">
                   <a class="btn btn-round btn-gradient-blue btn-lg">儲存</a>
-                  <a class="btn btn-round btn-gradient-gray btn-lg" href="MemberManagement_Qry.html">取消</a>
+                  <a class="btn btn-round btn-gradient-gray btn-lg" href="ProductInfo.html">取消</a>
                 </div>
               </form>
             </div>
@@ -237,12 +237,6 @@
     $(document).ready(function() {
       $('#AppQryTable').DataTable(qryTableOptions);
       $('.selectpicker').selectpicker({});
-
-      // $('#ProductInfoTabs a').click(function (e) {
-      //   e.preventDefault()
-      //   $(this).tab('show')
-      // })
-
     });
   </script>
 

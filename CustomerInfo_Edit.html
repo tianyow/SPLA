@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>北祥 SPLA Monthly Report Portal</title>
+  <link rel="SHORTCUT ICON" href="" />
+  <!-- css -->
+  <link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="vendor/bootstrap-select/css/bootstrap-select.min.css">
+  <link rel="stylesheet" href="vendor/DataTables/datatables.min.css" />
+  <link rel="stylesheet" href="css/SPLA-styles.css">
+</head>
+
+<body>
+  <nav id="SPLA-navbar" class="navbar-vertical">
+    <div href="#"><img src="images/SPLA-logo.svg" alt=""></div>
+      <div class="vertical-menu">
+        <ul class="nav navbar-nav">
+          <li class="nav-item">
+            <a href="#">
+            <span class="v-menu-icon"><i class="icon_chart_report"></i></span>
+            <span class="navbar-link">用量報表</span>
+          </a>
+          </li>
+          <li class="nav-item active">
+            <a href="CustomerInfo_Qry.html">
+            <span class="v-menu-icon"><i class="icon_user_info"></i></span>
+            <span class="navbar-link">客戶資訊</span>
+          </a>
+          </li>
+          <li class="nav-item">
+            <a href="ProductInfo.html">
+            <span class="v-menu-icon"><i class="icon_product_info"></i></span>
+            <span class="navbar-link">產品資訊</span>
+          </a>
+          </li>
+          <li class="nav-item">
+            <a href="MemberManagement_Qry.html">
+            <span class="v-menu-icon"><i class="icon_member_management"></i></span>
+            <span class="navbar-link">人員管理</span>
+          </a>
+          </li>
+          <li class="nav-item">
+            <a href="#">
+            <span class="v-menu-icon"><i class="icon_history_report"></i></span>
+            <span class="navbar-link">歷史報表</span>
+          </a>
+          </li>
+        </ul>
+      </div><!-- /.vertical-menu -->
+  </nav><!-- / #admin-navbar -->
+  <div class="nav-userinfo-bar">
+    <div class="nav-userinfo">
+      <div class="nav-usermail"><a href="#">admin01@pershing.onmicrosoft.com</a></div>
+      <a class="nav-logout" href="" data-toggle="modal" data-target="#msg-logout">登出</a>
+    </div><!-- /.nav-userinfo -->
+  </div><!-- /.nav-userinfo-bar -->
+  <div class="page-title-header">
+    <h2 class="page-title"><a href="CustomerInfo_Qry.html">客戶資訊</a>基本資料</h2>
+  </div><!-- /.page-title-header -->
+  <div class="contentWrapper">
+    <div class="inner-wrapper">
+
+      <div class="formWrap_label_inline">
+        <form action="http://localhost:2303/Admin/CustomerInfo_Save" id="CustomerInfoForm" method="post" novalidate="novalidate"><input id="ActionMode" name="ActionMode" type="hidden" value="A">
+          <div class="form-group">
+            <label for="TaxID">統一編號</label>
+            <input class="form-control" data-val="true" data-val-required="統一編號為必輸欄位！" id="TaxID" name="TaxID" type="text" value="" size="10">
+            <span class="field-validation-valid field-validation-valid text-danger" data-valmsg-for="TaxID" data-valmsg-replace="true"></span>
+          </div>
+          <div class="form-group">
+            <label for="CompanyCName">公司中文名稱</label>
+            <input class="form-control" data-val="true" data-val-required="公司中文名稱為必輸欄位！" id="CompanyCName" name="CompanyCName" type="text" value="" size="100">
+            <span class="field-validation-valid field-validation-valid text-danger" data-valmsg-for="CompanyCName" data-valmsg-replace="true"></span>
+          </div>
+          <div class="form-group">
+            <label for="CompanyEName">公司英文名稱</label>
+            <input class="form-control" data-val="true" data-val-required="公司英文名稱為必輸欄位！" id="CompanyEName" name="CompanyEName" type="text" value="" size="100">
+            <span class="field-validation-valid field-validation-valid text-danger" data-valmsg-for="CompanyEName" data-valmsg-replace="true"></span>
+          </div>
+          <div class="form-group">
+            <label for="CompanyCAddress">公司中文地址</label>
+            <input class="form-control" data-val="true" data-val-required="公司中文地址為必輸欄位！" id="CompanyCAddress" name="CompanyCAddress" type="text" value="" size="100">
+            <span class="field-validation-valid field-validation-valid text-danger" data-valmsg-for="CompanyCAddress" data-valmsg-replace="true"></span>
+          </div>
+          <div class="form-group">
+            <label for="CompanyEAddress">公司英文地址</label>
+            <input class="form-control" data-val="true" data-val-required="公司英文地址為必輸欄位！" id="CompanyEAddress" name="CompanyEAddress" type="text" value="" size="100">
+            <span class="field-validation-valid field-validation-valid text-danger" data-valmsg-for="CompanyEAddress" data-valmsg-replace="true"></span>
+          </div>
+          <div class="form-group">
+            <label for="ContactPersonCName">聯絡人窗口中文姓名</label>
+            <input class="form-control" data-val="true" data-val-required="聯絡人窗口中文姓名為必輸欄位！" id="ContactPersonCName" name="ContactPersonCName" type="text" value="" size="20">
+            <span class="field-validation-valid field-validation-valid text-danger" data-valmsg-for="ContactPersonCName" data-valmsg-replace="true"></span>
+          </div>
+          <div class="form-group">
+            <label for="ContactPersonEName">聯絡人窗口英文姓名</label>
+            <input class="form-control" data-val="true" data-val-required="聯絡人窗口英文姓名為必輸欄位！" id="ContactPersonEName" name="ContactPersonEName" type="text" value="" size="40">
+            <span class="field-validation-valid field-validation-valid text-danger" data-valmsg-for="ContactPersonEName" data-valmsg-replace="true"></span>
+          </div>
+          <div class="form-group">
+            <label for="ContactPersonTitle">聯絡人英文職稱</label>
+            <input class="form-control" data-val="true" data-val-required="聯絡人英文職稱為必輸欄位！" id="ContactPersonTitle" name="ContactPersonTitle" type="text" value="" size="20">
+            <span class="field-validation-valid field-validation-valid text-danger" data-valmsg-for="ContactPersonTitle" data-valmsg-replace="true"></span>
+          </div>
+          <div class="form-group">
+            <label for="ContactMail">聯絡人電子信箱</label>
+            <input class="form-control" data-val="true" data-val-required="聯絡人電子信箱為必輸欄位！" id="ContactMail" name="ContactMail" type="text" value="" size="80">
+            <span class="field-validation-valid field-validation-valid text-danger" data-valmsg-for="ContactMail" data-valmsg-replace="true"></span>
+          </div>
+          <div class="form-group">
+            <label for="PhoneNumber">電話號碼</label>
+            <input class="form-control" data-val="true" data-val-required="電話號碼為必輸欄位！" id="PhoneNumber" name="PhoneNumber" type="text" value="">
+            <span class="field-validation-valid field-validation-valid text-danger" data-valmsg-for="PhoneNumber" data-valmsg-replace="true"></span>
+          </div>
+          <div class="form-group">
+            <label for="FaxNumber">傳真號碼</label>
+            <input class="form-control" data-val="true" data-val-required="傳真號碼為必輸欄位！" id="FaxNumber" name="FaxNumber" type="text" value="">
+            <span class="field-validation-valid field-validation-valid text-danger" data-valmsg-for="FaxNumber" data-valmsg-replace="true"></span>
+          </div>
+          <div class="form-group">
+            <label for="ContractSignerCName">合約簽署人中文姓名</label>
+            <input class="form-control" data-val="true" data-val-required="合約簽署人中文姓名為必輸欄位！" id="ContractSignerCName" name="ContractSignerCName" type="text" value="" size="20">
+            <span class="field-validation-valid field-validation-valid text-danger" data-valmsg-for="ContractSignerCName" data-valmsg-replace="true"></span>
+          </div>
+          <div class="form-group">
+            <label for="ContractSignerEName">合約簽署人英文姓名</label>
+            <input class="form-control" data-val="true" data-val-required="合約簽署人英文姓名為必輸欄位！" id="ContractSignerEName" name="ContractSignerEName" type="text" value="" size="40">
+            <span class="field-validation-valid field-validation-valid text-danger" data-valmsg-for="ContractSignerEName" data-valmsg-replace="true"></span>
+          </div>
+          <div class="form-group">
+            <label for="ContractSignerTitle">合約簽署人職稱</label>
+            <input class="form-control" data-val="true" data-val-required="合約簽署人職稱為必輸欄位！" id="ContractSignerTitle" name="ContractSignerTitle" type="text" value="" size="50">
+            <span class="field-validation-valid field-validation-valid text-danger" data-valmsg-for="ContractSignerTitle" data-valmsg-replace="true"></span>
+          </div>
+          <div class="form-group">
+            <label for="ContractSignerMail">合約簽署人電子信箱</label>
+            <input class="form-control" data-val="true" data-val-required="合約簽署人電子信箱為必輸欄位！" id="ContractSignerMail" name="ContractSignerMail" type="text" value=""size="80">
+            <span class="field-validation-valid field-validation-valid text-danger" data-valmsg-for="ContractSignerMail" data-valmsg-replace="true"></span>
+          </div>
+          <div class="form-group">
+            <label for="MPNID">Microsoft Partner Network (MPN ID)</label>
+            <input class="form-control" data-val="true" data-val-required="MPN ID為必輸欄位！" id="MPNID" name="MPNID" type="text" value="" size="20">
+            <span class="field-validation-valid field-validation-valid text-danger" data-valmsg-for="MPNID" data-valmsg-replace="true"></span>
+          </div>
+          <div class="form-group">
+            <label for="ContractNumber">合約號碼</label>
+            <input class="form-control" data-val="true" data-val-required="合約號碼為必輸欄位！" id="ContractNumber" name="ContractNumber" type="text" value="" size="20">
+            <span class="field-validation-valid field-validation-valid text-danger" data-valmsg-for="ContractNumber" data-valmsg-replace="true"></span>
+          </div>
+          <div class="form-group">
+            <label for="ContractStartDate">合約起日</label>
+            <input class="form-control input-date" data-val="true" data-val-required="合約起日為必輸欄位！" id="ContractStartDate" name="ContractStartDate" style="width:250px" type="date" value="">
+            <span class="field-validation-valid field-validation-valid text-danger" data-valmsg-for="ContractStartDate" data-valmsg-replace="true"></span>
+          </div>
+          <div class="form-group">
+            <label for="ContractEndDate">合約訖日</label>
+            <input class="form-control input-date" data-val="true" data-val-required="合約訖日為必輸欄位！" id="ContractEndDate" min="2018-10-31" name="ContractEndDate" style="width:250px" type="date" value="">
+            <span class="field-validation-valid field-validation-valid text-danger" data-valmsg-for="ContractEndDate" data-valmsg-replace="true"></span>
+          </div>
+          <div class="form-group">
+            <label for="PershingSales">北祥負責業務</label>
+            <input class="form-control" data-val="true" data-val-required="北祥負責業務為必輸欄位！" id="PershingSales" name="PershingSales" type="text" value="">
+            <span class="field-validation-valid field-validation-valid text-danger" data-valmsg-for="PershingSales" data-valmsg-replace="true"></span>
+          </div>
+          <div class="form-group">
+            <label for="PayType">合約付款類型</label>
+            <div class="form-group">
+              <input checked="checked" id="PayTypeM" name="PayType" type="radio" value="M">
+              <label for="PayTypeM">月繳</label>
+              <input id="PayTypeY" name="PayType" type="radio" value="Y">
+              <label for="PayTypeY">年繳</label>
+              <input id="PayTypeS" name="PayType" type="radio" value="S">
+              <label for="PayTypeS">特殊業案</label>
+              <span class="field-validation-valid field-validation-valid text-danger" data-valmsg-for="PayType" data-valmsg-replace="true"></span>
+            </div>
+          </div>
+          <div class="btn-wrap">
+            <input type="button" onclick="beforeSubmit(&#39;A&#39;)" value="儲存" class="btn btn-round btn-gradient-blue btn-lg">
+            <a class="btn btn-round btn-gradient-gray btn-lg" href="http://localhost:2303/Admin/CustomerInfo_Qry?Length=5">返回</a>
+          </div>
+        </form>
+      </div><!-- /.formWrap_label_inline -->
+    </div><!-- /.inner-wrapper-->
+  </div><!-- /.contentWrapper -->
+
+  <!-- modal: 登出 -->
+  <div class="modal fade" id="msg-logout" role="dialog">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-header"></div>
+        <div id="message-sm-body" class="modal-body align-center">
+          確定要登出嗎?
+        </div>
+        <div class="modal-footer">
+          <a href="index.html" class="btn btn-gradient btn-lg">確定</a>
+          <button type="button" class="btn btn btn-gradient-gray btn-lg" data-dismiss="modal" onclick="clearShowMessage();">取消</button>
+        </div>
+      </div>
+      <!-- <a class="btnCloseModal" data-dismiss="modal">&times;</a> -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+  <!-- script -->
+  <script src="vendor/jquery/dist/jquery.min.js"></script>
+  <script src="vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="vendor/bootstrap-select/js/bootstrap-select.min.js"></script>
+  <script src="vendor/DataTables/datatables.min.js"></script>
+  <script src="js/SPLA-scripts.js"></script>
+  <script>
+  $(document).ready(function() {
+    $('#AppQryTable').DataTable(qryTableOptions);
+    $('.selectpicker').selectpicker({});
+  });
+  </script>
+</body>
+
+</html>

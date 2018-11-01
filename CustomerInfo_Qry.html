@@ -23,7 +23,7 @@
             <span class="navbar-link">用量報表</span>
           </a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item active">
           <a href="CustomerInfo_Qry.html">
             <span class="v-menu-icon"><i class="icon_user_info"></i></span>
             <span class="navbar-link">客戶資訊</span>
@@ -35,7 +35,7 @@
             <span class="navbar-link">產品資訊</span>
           </a>
         </li>
-        <li class="nav-item active">
+        <li class="nav-item">
           <a href="MemberManagement_Qry.html">
             <span class="v-menu-icon"><i class="icon_member_management"></i></span>
             <span class="navbar-link">人員管理</span>
@@ -59,10 +59,14 @@
   </div><!-- /.nav-userinfo-bar -->
 
   <div class="page-title-header">
-    <h2 class="page-title">人員管理</h2>
+    <h2 class="page-title">客戶資訊</h2>
     <div class="data-qry-wrap">
-      <a href="MemberManagement_Add.html" class="btn btn-gradient btn-round"><img src="images/btn-icon-add.png" alt="" width="18">新增人員</a>
+      <a href="CustomerInfo_Edit.html" class="btn btn-gradient btn-round"><img src="images/btn-icon-add.png" alt="" width="18">新增客戶</a>
     </div><!-- /.data-qry-wrap -->
+    <div class="customerInfoSearch">
+      <input type="text">
+      <button class="btn btn-gradient-blue">搜尋</button>
+    </div>
   </div><!-- /.page-title-header -->
 
   <div class="contentWrapper">
@@ -71,57 +75,49 @@
         <table id="AppQryTable" class="table table-hover table-serial">
           <thead>
             <tr>
-              <th>公司名稱</th>
-              <th>企業帳戶</th>
-              <th>更新時間</th>
-              <th class="no-sort align-center" width="60">編輯</th>
-              <th class="no-sort align-center" width="60">重置密碼</th>
+              <th width="100">合約編號</th>
+              <th>客戶名稱</th>
+              <th width="110">合約到期日</th>
+              <th class="no-sort align-center" width="60">基本資料</th>
+              <th class="no-sort align-center" width="60">報價品項</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>pscaber</td>
-              <td>20939790</td>
-              <td>2018/10/23 23:12</td>
-              <td align="center"><a href="MemberManagement_Edit.html" class="btn_intable_round btn_intable_edit"></a></td>
-              <td align="center"><a class="btn_intable_round btn_intable_resetPwd" data-toggle="modal" data-target="#reset-pwd"></a></td>
+              <td>70135677</td>
+              <td>自由系統</td>
+              <td>2018/12/10</td>
+              <td align="center"><a href="CustomerInfo_Edit.html" class="btn_intable_round btn_intable_userList"></a></td>
+              <td align="center"><a href="CustomerInfo_PriceList.html" class="btn_intable_round btn_intable_priceList"></a></td>
             </tr>
             <tr>
-              <td>pscaber1</td>
-              <td>20939791</td>
-              <td>2018/10/24 12:12</td>
-              <td align="center"><a href="MemberManagement_Edit.html" class="btn_intable_round btn_intable_edit"></a></td>
-              <td align="center"><a class="btn_intable_round btn_intable_resetPwd" data-toggle="modal" data-target="#reset-pwd"></a></td>
+              <td>70135677</td>
+              <td>自由系統</td>
+              <td>2018/12/10</td>
+              <td align="center"><a href="CustomerInfo_Edit.html" class="btn_intable_round btn_intable_userList"></a></td>
+              <td align="center"><a href="CustomerInfo_PriceList.html" class="btn_intable_round btn_intable_priceList"></a></td>
             </tr>
             <tr>
-              <td>pscaber2</td>
-              <td>20939792</td>
-              <td>2018/10/25 18:12</td>
-              <td align="center"><a class="btn_intable_round btn_intable_edit disabled"></a></td>
-              <td align="center"><a class="btn_intable_round btn_intable_resetPwd disabled"></a></td>
+              <td>70135677</td>
+              <td>自由系統</td>
+              <td>2018/12/10</td>
+              <td align="center"><a href="CustomerInfo_Edit.html" class="btn_intable_round btn_intable_userList"></a></td>
+              <td align="center"><a href="CustomerInfo_PriceList.html" class="btn_intable_round btn_intable_priceList"></a></td>
             </tr>
+            <tr>
+              <td>70135677</td>
+              <td>自由系統</td>
+              <td>2018/12/10</td>
+              <td align="center"><a href="CustomerInfo_Edit.html" class="btn_intable_round btn_intable_userList"></a></td>
+              <td align="center"><a href="CustomerInfo_PriceList.html" class="btn_intable_round btn_intable_priceList"></a></td>
+            </tr>
+            
           </tbody>
         </table>
       </div><!-- /.table-responsive -->
-    </div><!-- /.container-->
+    </div><!-- /.inner-wrapper-->
 
   </div><!-- /.contentWrapper -->
-
-  <!-- modal: 重置密碼 -->
-  <div class="modal fade" id="reset-pwd" role="dialog">
-    <div class="modal-dialog modal-sm">
-      <div class="modal-content">
-        <div class="modal-header">重置密碼</div>
-        <div id="message-sm-body" class="modal-body align-center">
-          將驗證密碼發送到郵件<br>x******@xxxxxx.xxx.xx?
-        </div>
-        <div class="modal-footer">
-          <a href="" class="btn btn-gradient btn-lg">確定</a>
-          <button type="button" class="btn btn-gradient-gray btn-lg" data-dismiss="modal" onclick="clearShowMessage();">取消</button>
-        </div>
-      </div>
-    </div><!-- /.modal-dialog -->
-  </div><!-- /.modal -->
 
   <!-- modal: 登出 -->
     <div class="modal fade" id="msg-logout" role="dialog">

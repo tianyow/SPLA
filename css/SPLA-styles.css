@@ -281,6 +281,7 @@ input[type=radio] + label {
   cursor: pointer;
   color: #666;
   padding: 6px 25px;
+  text-align: center;
 }
 input[type=radio] + label:hover {
   background: #ddd;
@@ -483,18 +484,39 @@ input[type=radio]:checked + label {
   letter-spacing: 1.3px;
 }
 .nav-userinfo-bar .nav-usermail {
-  color: #eee;
-  font-size: 12px;
   float: left;
+  line-height: 1;
+  padding: 2px 10px;
+  text-decoration: none;
+}
+.nav-userinfo-bar .nav-usermail a {
+  color: #ddd;
+  font-size: 12px;
+  text-decoration: none;
+}
+.nav-userinfo-bar .nav-usermail a::before {
+  content: "";
+  background: url("../images/icon_change_pwd.png");
+  background-size: cover;
+  display: block;
+  float: left;
+  width: 16px;
+  height: 16px;
+  margin-right: 5px;
+}
+.nav-userinfo-bar .nav-usermail:hover {
+  background: #14283e;
+  transition: 0.5s;
+}
+.nav-userinfo-bar .nav-usermail:hover a {
+  color: #fff;
 }
 .nav-userinfo-bar .nav-logout {
   background: darkred;
   color: #fff;
   font-size: 12px;
   float: left;
-  margin-left: 10px;
-  padding: 0 10px;
-  text-decoration: none;
+  padding: 2px 10px;
 }
 .nav-userinfo-bar .nav-logout:hover {
   background: red;
@@ -608,69 +630,114 @@ input[type=radio]:checked + label {
   border-radius: 5px;
 }
 
-.formWrap_center {
-  margin: 0 auto;
-  margin-top: 40px;
-  width: 50%;
-}
-.formWrap_center input[type=text],
-.formWrap_center input[type=password],
-.formWrap_center input[type=search],
-.formWrap_center input[type=date],
-.formWrap_center textarea {
+input[type=text],
+input[type=password],
+input[type=search],
+input[type=date],
+textarea, textarea.form-control {
+  border: 1px solid #ccc;
   font-size: 16px;
   font-weight: bold;
+  padding: 3px 10px;
+  width: auto;
+  max-width: 70%;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
 }
-.formWrap_center input[type=text].input-5digit,
-.formWrap_center input[type=password].input-5digit,
-.formWrap_center input[type=search].input-5digit,
-.formWrap_center input[type=date].input-5digit,
-.formWrap_center textarea.input-5digit {
-  width: 5em;
-}
-.formWrap_center input[type=text].input-date,
-.formWrap_center input[type=password].input-date,
-.formWrap_center input[type=search].input-date,
-.formWrap_center input[type=date].input-date,
-.formWrap_center textarea.input-date {
+input[type=text].input-date,
+input[type=password].input-date,
+input[type=search].input-date,
+input[type=date].input-date,
+textarea.input-date, textarea.form-control.input-date {
   width: 10em;
 }
-.formWrap_center input[type=text]:disabled,
-.formWrap_center input[type=password]:disabled,
-.formWrap_center input[type=search]:disabled,
-.formWrap_center input[type=date]:disabled,
-.formWrap_center textarea:disabled {
+input[type=text]:disabled,
+input[type=password]:disabled,
+input[type=search]:disabled,
+input[type=date]:disabled,
+textarea:disabled, textarea.form-control:disabled {
   background: #eee;
   color: #777;
 }
-.formWrap_center .bootstrap-select .btn.disabled {
+
+.bootstrap-select {
+  width: auto !important;
+}
+.bootstrap-select .btn.disabled {
   background: #eee;
   color: #777 !important;
   opacity: 1 !important;
 }
-.formWrap_center .dropdown-toggle {
+
+.dropdown-toggle {
   padding-top: 6px !important;
   padding-bottom: 6px !important;
 }
-.formWrap_center .dropdown-menu {
+
+.dropdown-menu {
   font-size: 16px;
 }
-.formWrap_center .dropdown-menu > .active > a {
+.dropdown-menu > .active > a {
   background: #62e0e9;
   color: #000;
   font-weight: bold;
 }
-.formWrap_center .dropdown-menu > .active > a:focus, .formWrap_center .dropdown-menu > .active > a:hover {
+.dropdown-menu > .active > a:focus, .dropdown-menu > .active > a:hover {
   background: #62e0e9;
   color: #000;
   font-weight: bold;
 }
 
+.formWrap {
+  text-align: left;
+}
+.formWrap label {
+  width: 20%;
+}
+.formWrap_center {
+  margin: 0 auto;
+  margin-top: 40px;
+  width: 50%;
+}
+.formWrap_center textarea, .formWrap_center textarea.form-control {
+  width: 100%;
+  max-width: 100%;
+}
+.formWrap_center .bootstrap-select {
+  width: 100% !important;
+}
+
 .input-group .form-control {
   float: none;
+}
+
+.formWrap_label_inline {
+  margin: 0 auto;
+  margin-top: 20px;
+  width: 80%;
+}
+.formWrap_label_inline .form-group {
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  text-align: left;
+  zoom: 1;
+}
+.formWrap_label_inline .form-group:before, .formWrap_label_inline .form-group:after {
+  content: "";
+  display: table;
+}
+.formWrap_label_inline .form-group:after {
+  clear: both;
+}
+.formWrap_label_inline .form-group:not(:last-child) {
+  border-bottom: 1px dotted #ddd;
+}
+.formWrap_label_inline label {
+  display: inline;
+  float: left;
+  width: 240px;
+  padding-top: 5px;
 }
 
 .table > tbody > tr > td,
@@ -1116,7 +1183,6 @@ tr.shown:hover {
 .bootstrap-select {
   border: 1px solid #ccc;
   display: block;
-  width: 100% !important;
 }
 
 .bootstrap-select > .dropdown-toggle.bs-placeholder,
@@ -1352,6 +1418,18 @@ tr.shown:hover {
   right: 20px;
 }
 .productInfoSearch input {
+  float: left;
+  height: 34px;
+  padding: 0 10px;
+}
+
+.customerInfoSearch {
+  position: absolute;
+  top: 10px;
+  right: 160px;
+}
+
+.productInfoSearch input, .customerInfoSearch input {
   float: left;
   height: 34px;
   padding: 0 10px;
