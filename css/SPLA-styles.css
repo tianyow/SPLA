@@ -715,11 +715,18 @@ textarea:disabled, textarea.form-control:disabled {
 .formWrap_label_inline {
   margin: 0 auto;
   margin-top: 20px;
-  width: 80%;
+  width: 90%;
+}
+.formWrap_label_inline .form-group-wrap h2 {
+  color: #47c1ff;
+  font-size: 28px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #47c1ff;
 }
 .formWrap_label_inline .form-group {
   margin-bottom: 10px;
   padding-bottom: 10px;
+  padding-left: 60px;
   text-align: left;
   zoom: 1;
 }
@@ -736,7 +743,7 @@ textarea:disabled, textarea.form-control:disabled {
 .formWrap_label_inline label {
   display: inline;
   float: left;
-  width: 240px;
+  width: 220px;
   padding-top: 5px;
 }
 

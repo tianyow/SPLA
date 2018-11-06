@@ -631,10 +631,19 @@ textarea, textarea.form-control {
 .formWrap_label_inline {
   margin: 0 auto;
   margin-top: 20px;
-  width: 80%;
+  width: 90%;
+  .form-group-wrap {
+    h2 {
+      color: $blue-light-03;
+      font-size: 28px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid $blue-light-03;
+    }
+  }
   .form-group {
     margin-bottom: 10px;
     padding-bottom: 10px;
+    padding-left: 60px;
     text-align: left;
     @include clearfix();
     &:not(:last-child) {
@@ -644,7 +653,7 @@ textarea, textarea.form-control {
   label {
     display: inline;
     float: left;
-    width: 240px;
+    width: 220px;
     padding-top: 5px;
   }
 }
