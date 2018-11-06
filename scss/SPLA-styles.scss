@@ -194,6 +194,22 @@ a.txt-link {
     background: #0093E7!important;
   }
 }
+.btn-gradient-blue-dark {
+  color: #fff;
+  @include linear-gradient(top, $blue-dark-01, $blue-dark-03); 
+  &:hover,
+  &:focus {
+    background: $blue-dark-01;
+    color: #fff;
+    text-decoration: none;
+  }
+  &:focus {
+    @include dropShadow(0, 1px, 3px, 0px, #38C0FF);
+  }
+  &:active {
+    background: $blue-dark-01!important;
+  }
+}
 .btn-gradient-red {
   color: #fff;
   @extend .btn-gradient;
@@ -1353,6 +1369,23 @@ tr.shown:hover {
     float: left;
     height: 34px;
     padding: 0 10px;
+    max-width: 100%;
+  }
+  .searchBy {
+    float: left;
+    width: 200px;
+    margin-right: 10px;
+  }
+  .input-group {
+    .input-group-addon {
+      background: #ddd;
+      border: 1px solid #ccc;
+      border-right: none;
+      color: #111;
+      padding: 6px;
+      font-size: 12px;
+      @include borderRadius(0);
+    }
   }
 }
 .customerInfoSearch {

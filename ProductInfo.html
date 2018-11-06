@@ -79,8 +79,19 @@
           <div role="tabpanel" class="tab-pane active" id="pricebook">
 
             <div class="productInfoSearch">
-              <input type="text">
-              <button class="btn btn-gradient-blue">搜尋</button>
+              <div class="searchBy">
+                <div class="input-group">
+                  <span class="input-group-addon" id="searchByNum">By 編號</span>
+                  <input type="text" class="form-control" placeholder="" aria-describedby="searchByNum">
+                </div>
+              </div>
+              <div class="searchBy">
+                <div class="input-group">
+                  <span class="input-group-addon" id="searchByName">By 名稱</span>
+                  <input type="text" class="form-control" placeholder="" aria-describedby="searchByName">
+                </div>
+              </div>
+              <button class="btn btn-gradient-blue-dark">搜尋</button>
             </div>
 
             <div class="table-responsive">

@@ -228,6 +228,35 @@ a.txt-link:hover {
   background: #0093E7 !important;
 }
 
+.btn-gradient-blue-dark {
+  color: #fff;
+  background-color: #14283e;
+  /* Fallback Color */
+  background-image: -webkit-linear-gradient(top, #374b62, #14283e);
+  /* Chrome 10+, Saf5.1+, iOS 5+ */
+  background-image: -moz-linear-gradient(top, #374b62, #14283e);
+  /* FF3.6 */
+  background-image: -ms-linear-gradient(top, #374b62, #14283e);
+  /* IE10 */
+  background-image: -o-linear-gradient(top, #374b62, #14283e);
+  /* Opera 11.10+ */
+  background-image: linear-gradient(top, #374b62, #14283e);
+}
+.btn-gradient-blue-dark:hover, .btn-gradient-blue-dark:focus {
+  background: #374b62;
+  color: #fff;
+  text-decoration: none;
+}
+.btn-gradient-blue-dark:focus {
+  -webkit-box-shadow: 0 1px 3px 0px #38C0FF;
+  -moz-box-shadow: 0 1px 3px 0px #38C0FF;
+  box-shadow: 0 1px 3px 0px #38C0FF;
+  /* -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=180, Color='#000000')"; */
+}
+.btn-gradient-blue-dark:active {
+  background: #374b62 !important;
+}
+
 .btn-gradient-red {
   color: #fff;
   background-color: #cc0000;
@@ -1428,6 +1457,23 @@ tr.shown:hover {
   float: left;
   height: 34px;
   padding: 0 10px;
+  max-width: 100%;
+}
+.productInfoSearch .searchBy {
+  float: left;
+  width: 200px;
+  margin-right: 10px;
+}
+.productInfoSearch .input-group .input-group-addon {
+  background: #ddd;
+  border: 1px solid #ccc;
+  border-right: none;
+  color: #111;
+  padding: 6px;
+  font-size: 12px;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
 }
 
 .customerInfoSearch {
