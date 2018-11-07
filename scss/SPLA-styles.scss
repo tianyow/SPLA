@@ -1,11 +1,11 @@
 @import 'mixins';
-//@import url(http://fonts.googleapis.com/css?family=Roboto:300,400,700);
+@import url(http://fonts.googleapis.com/css?family=Roboto:300,400,700);
 // Global Styles
 * {
   box-sizing: border-box;
 }
 ::selection {
-  background: $blue-neon;
+  background: lighten($blue-neon, 20%);
 }
 html {
   font-family: "Helvetica Neue", Helvetica, Arial, "微軟正黑體", "Microsoft JhengHei", sans-serif;
@@ -416,7 +416,7 @@ input[type=radio] {
   }
 }
 .inner-wrapper {
-  padding: 10px 20px 40px;
+  padding: 16px 20px 40px;
   height: calc(100vh - 75px);
   overflow: auto;
   position: relative;
@@ -1398,5 +1398,67 @@ tr.shown:hover {
     float: left;
     height: 34px;
     padding: 0 10px;
+  }
+}
+
+// 用量回報
+.usageReport-info-row {
+  display: grid;
+  grid-template-columns: 1.5fr 1.5fr 8fr;
+  grid-column-gap: 10px;
+  margin-bottom: 10px;  
+}
+.usageReport-info-section {
+  box-sizing: border-box;
+  border: 2px solid $blue-neon;
+  padding: 5px 10px;
+
+  .info-label {
+    color: $blue-neon;
+    font-size: 13px;
+    font-weight: bold;
+  }
+  .report-count {
+    color: #999;
+    float: right;
+    font-size: 11px;
+    font-weight: normal;
+    .badge {
+      background: $gold;
+      border-radius: 15px;
+    }
+  }
+  .info-value {
+    color: #666;
+    font-family: "Roboto";
+    font-size: 21px;
+    font-weight: bold;
+  }
+
+}
+tr.usageReport-sum {
+  background: #eee;
+  text-align: center;
+  &:hover {
+    background: #dedede !important;
+  }
+}
+.usageReport-sum-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 8px 0;
+}
+.usageReport-sum-section {
+  .sum-label {
+    color: #999;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 6px;
+  }
+  .sum-value {
+    color: #333;
+    font-family: "Roboto";
+    font-size: 32px;
+    font-weight: bold;
   }
 }
