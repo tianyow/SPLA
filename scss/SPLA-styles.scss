@@ -141,7 +141,9 @@ a.txt-link {
   text-decoration: none;
   img {
     float: left;
-    margin-right: 5px;
+    margin-right: 8px;
+    margin-top: 1px;
+    height: 19px;
   }
 }
 .btn-link {
@@ -163,6 +165,7 @@ a.txt-link {
   }
 }
 .btn-gradient {
+  border: 1px solid #00a6cc;
   color: #eee;
   @include linear-gradient(top, $blue-gradientBtn-01, $blue-gradientBtn-02); 
   &:hover,
@@ -516,11 +519,11 @@ input[type=radio] {
 .data-qry-wrap {
   //background: #111;
   float: right;
-  height: 55px;
-  padding: 5px 15px;
+  //height: 55px;
+  padding: 10px 15px;
   .bootstrap-select {
     float: left;
-    height: 32px;
+    //height: 32px;
     margin: 0 4px;
     width: auto !important;
     .dropdown-menu {
@@ -537,7 +540,7 @@ input[type=radio] {
     }
   }
   a.btn {
-    padding: 10px 20px;
+    padding: 6px 20px;
     @include dropShadow(2px, 2px, 5px, 5px, $blue-dark-02);
   }
 }
@@ -759,7 +762,7 @@ table.dataTable {
       @include transition(all, .3s, linear);
       &:hover {
         //box-shadow: #ccc 0 1px 3px 3px;
-        background: $blue-light-01;
+        //background: $blue-light-01;
       }
     }
     td {
@@ -770,29 +773,51 @@ table.dataTable {
 
 }
 .table-row-expand {
-  @include linear-gradient(left, #FDF7E1, #FFE9C5);
+  //background: $blue-dark-02;
+  @include linear-gradient(top, $blue-dark-02, $blue-dark-01);
+  &:hover {
+    //background: $blue-dark-02 !important;
+  }
 }
 .expand-detail-table {
   margin: 0 auto;
   width: 98%;
   th,td {
-    font-size: 13px;
+    color: #eee !important;
+    font-size: 15px;
     padding: 5px 10px;
     &.aRight {
       text-align: right;
     }
   }
   th {
+    color: $blue-neon !important;
     font-weight: normal;
   }
   tr {
     &:hover {
-      box-shadow: none !important;
+      //box-shadow: none !important;
     }
   }
   tr:not(:first-child) {
     &:hover {
-      background: rgba(255,255,255,0.8);
+      //background: rgba(255,255,255,0.8);
+    }
+  }
+  .sum-row {
+    border-top: 2px solid $blue-neon;
+    text-align: right;
+  }
+  .sum-row-field {
+    color: #fff;
+    display: inline;
+    font-family: "Roboto";
+    font-size: 26px;
+    margin-left: 40px;
+    span {
+      color: $blue-neon;
+      font-size: 15px;
+      margin-right: 15px;
     }
   }
 }
@@ -807,7 +832,7 @@ table.dataTable {
 }
 tr.shown,
 tr.shown:hover {
-  background: #ffeea0 !important;
+  background: #93f7ff !important;
 }
 
 // --- 檢視筆數, 搜尋

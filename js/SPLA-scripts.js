@@ -43,28 +43,31 @@ $(document).ready(function() {
       '<div>'+
         '<table class="expand-detail-table">'+
           '<tr>'+
-            '<th>服務類型</th>'+
-            '<th>資源名稱</th>'+
-            '<th class="aRight">使用量</th>'+
+            '<th>產品編號</th>'+
+            '<th>產品名稱</th>'+
+            '<th class="aRight">數量</th>'+
+            '<th class="aRight">單價</th>'+
             '<th class="aRight">小計</th>'+
           '</tr>'+
           '<tr>'+
-            '<td>LOCALLY REDUNDANT</td>'+
-            '<td>PREMIUM STORAGE - PAGE BLOB/P4 (UNITS)</td>'+
-            '<td class="aRight">2.591232</td>'+
-            '<td class="aRight">80</td>'+
+            '<td>9EA-00039</td>'+
+            '<td>WinSvrDCCore ALNG LicSAPk MVL 2Lic CoreL</td>'+
+            '<td class="aRight">64</td>'+
+            '<td class="aRight">NT$ 896</td>'+
+            '<td class="aRight">NT$ 57,344</td>'+
           '</tr>'+
           '<tr>'+
-            '<td>LOCALLY REDUNDANT</td>'+
-            '<td>STANDARD IO - FILES (GB)</td>'+
-            '<td class="aRight">2.41248</td>'+
-            '<td class="aRight">20</td>'+
+            '<td>9EA-00039</td>'+
+            '<td>WinSvrDCCore ALNG LicSAPk MVL 2Lic CoreL</td>'+
+            '<td class="aRight">64</td>'+
+            '<td class="aRight">NT$ 896</td>'+
+            '<td class="aRight">NT$ 57,344</td>'+
           '</tr>'+
-          '<tr>'+
-            '<td>LOCALLY REDUNDANT</td>'+
-            '<td>STANDARD IO - PAGE BLOB/DISK (GB)</td>'+
-            '<td class="aRight">0.001754</td>'+
-            '<td class="aRight">100</td>'+
+          '<tr class="sum-row">'+
+            '<td colspan="5" valign="center">'+
+            '<div class="sum-row-field"><span>營業稅</span> NTS 2,876</div>'+
+            '<div class="sum-row-field"><span>總價</span> NTS 60,211</div>'+
+            '</td>'+
           '</tr>'+
         '</table>'+
     '</div>'+
