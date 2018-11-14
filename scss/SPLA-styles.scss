@@ -165,7 +165,6 @@ a.txt-link {
   }
 }
 .btn-gradient {
-  border: 1px solid #00a6cc;
   color: #eee;
   @include linear-gradient(top, $blue-gradientBtn-01, $blue-gradientBtn-02); 
   &:hover,
@@ -182,6 +181,7 @@ a.txt-link {
   }
 }
 .btn-gradient-blue {
+  border: 1px solid #00a6cc;
   color: #fff;
   @include linear-gradient(top, #38C0FF, #0093E7); 
   &:hover,
@@ -214,6 +214,7 @@ a.txt-link {
   }
 }
 .btn-gradient-red {
+  border: 1px solid red;
   color: #fff;
   @extend .btn-gradient;
   @include linear-gradient(top, red, darken(red, 10%));
@@ -227,6 +228,7 @@ a.txt-link {
   }
 }
 .btn-gradient-gray {
+  border: 1px solid #999;
   color: #fff !important;
   @extend .btn-gradient;
   @include linear-gradient(top, #bbb, #999);
@@ -575,7 +577,7 @@ textarea, textarea.form-control {
   font-weight: bold;
   padding: 3px 10px;
   width: auto;
-  max-width: 70%;
+  //max-width: 70%;
   @include borderRadius(0);
 
   &.input-date {
@@ -662,19 +664,25 @@ textarea, textarea.form-control {
   .form-group {
     margin-bottom: 10px;
     padding-bottom: 10px;
-    padding-left: 60px;
+    //padding-left: 60px;
     text-align: left;
     @include clearfix();
     &:not(:last-child) {
       border-bottom: 1px dotted #ddd;
     }
+    & > label {
+      display: inline;
+      float: left;
+      width: 220px;
+      padding-top: 5px;
+      padding-left: 30px;
+    }
   }
-  label {
-    display: inline;
-    float: left;
-    width: 220px;
-    padding-top: 5px;
-  }
+}
+.radio-show-input {
+  background: $blue-neon;
+  display: inline-block;
+  padding: 3px 10px;
 }
 
 // Table Styles
@@ -1376,11 +1384,17 @@ tr.shown:hover {
           border: none;
           border-radius: 0;
         }
+        &:hover {
+          background: none;
+        }
       }
       &.active {
         a {
-          color:  $blue-gradientBtn-01;
+          color: $blue-gradientBtn-01;
           font-weight: bold;
+          &:hover {
+            background: #fff;
+          }
         }
       }
     }

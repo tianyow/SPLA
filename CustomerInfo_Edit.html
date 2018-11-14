@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>北祥 SPLA Monthly Report Portal</title>
-  <link rel="SHORTCUT ICON" href="" />
+  <link rel="SHORTCUT ICON" href="images/PSC-SPLA-Portal.png" />
   <!-- css -->
   <link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="vendor/bootstrap-select/css/bootstrap-select.min.css">
@@ -16,40 +15,46 @@
 <body>
   <nav id="SPLA-navbar" class="navbar-vertical">
     <div href="#"><img src="images/SPLA-logo.svg" alt=""></div>
-      <div class="vertical-menu">
-        <ul class="nav navbar-nav">
-          <li class="nav-item">
-            <a href="#">
+    <div class="vertical-menu">
+      <ul class="nav navbar-nav">
+        <li class="nav-item">
+          <a href="UsageForm.html">
             <span class="v-menu-icon"><i class="icon_chart_report"></i></span>
             <span class="navbar-link">用量報表</span>
           </a>
-          </li>
-          <li class="nav-item active">
-            <a href="CustomerInfo_Qry.html">
+        </li>
+        <li class="nav-item active">
+          <a href="CustomerInfo_Qry.html">
             <span class="v-menu-icon"><i class="icon_user_info"></i></span>
             <span class="navbar-link">客戶資訊</span>
           </a>
-          </li>
-          <li class="nav-item">
-            <a href="ProductInfo.html">
+        </li>
+        <li class="nav-item">
+          <a href="ProductInfo.html">
             <span class="v-menu-icon"><i class="icon_product_info"></i></span>
             <span class="navbar-link">產品資訊</span>
           </a>
-          </li>
-          <li class="nav-item">
-            <a href="MemberManagement_Qry.html">
+        </li>
+        <li class="nav-item">
+          <a href="MemberManagement_Qry.html">
             <span class="v-menu-icon"><i class="icon_member_management"></i></span>
             <span class="navbar-link">人員管理</span>
           </a>
-          </li>
-          <li class="nav-item">
-            <a href="#">
+        </li>
+        <li class="nav-item">
+          <a href="History_Qry.html">
             <span class="v-menu-icon"><i class="icon_history_report"></i></span>
             <span class="navbar-link">歷史報表</span>
           </a>
-          </li>
-        </ul>
-      </div><!-- /.vertical-menu -->
+        </li>
+        <li class="nav-item">
+          <a href="UsageReport.html">
+            <span class="v-menu-icon"><i class="icon_chart_report"></i></span>
+            <span class="navbar-link">用量回報</span>
+          </a>
+        </li>
+      </ul>
+    </div><!-- /.vertical-menu -->
   </nav><!-- / #admin-navbar -->
   <div class="nav-userinfo-bar">
     <div class="nav-userinfo">
@@ -133,13 +138,28 @@
               <span class="field-validation-valid field-validation-valid text-danger" data-valmsg-for="ContractEndDate" data-valmsg-replace="true"></span>
             </div>
             <div class="form-group">
+              <label for="ContractAdmin">合約線上管理員</label>
+              <div class="form-group-radio">
+                <input checked="checked" id="ContractAdmin1" name="ContractAdmin" type="radio" value="">
+                <label for="ContractAdmin1">北祥</label>
+                <input id="ContractAdmin2" name="ContractAdmin" type="radio" value="">
+                <label for="ContractAdmin2">主要聯絡人</label>
+                <input id="ContractAdmin3" name="ContractAdmin" type="radio" value="" class="contractAdminOther">
+                <label for="ContractAdmin3">其他</label>
+                <div class="radio-show-input"><input type="text" size="40" placeholder="請輸入其他聯絡人 Email"></div>
+                
+                <span class="field-validation-valid field-validation-valid text-danger" data-valmsg-for="ContractAdmin" data-valmsg-replace="true"></span>
+              </div>
+              <span class="field-validation-valid field-validation-valid text-danger" data-valmsg-for="ContractEndDate" data-valmsg-replace="true"></span>
+            </div>
+            <div class="form-group">
               <label for="PershingSales">北祥負責業務</label>
               <input class="form-control" data-val="true" data-val-required="北祥負責業務為必輸欄位！" id="PershingSales" name="PershingSales" type="text" value="">
               <span class="field-validation-valid field-validation-valid text-danger" data-valmsg-for="PershingSales" data-valmsg-replace="true"></span>
             </div>
             <div class="form-group">
               <label for="PayType">合約付款類型</label>
-              <div class="form-group">
+              <div class="form-group-radio">
                 <input checked="checked" id="PayTypeM" name="PayType" type="radio" value="M">
                 <label for="PayTypeM">月繳</label>
                 <input id="PayTypeY" name="PayType" type="radio" value="Y">
@@ -239,6 +259,14 @@
   $(document).ready(function() {
     $('#AppQryTable').DataTable(qryTableOptions);
     $('.selectpicker').selectpicker({});
+    $('.radio-show-input').hide();
+    $("input[name=ContractAdmin]").on( "change", function() {
+      if ($('.contractAdminOther').is(":checked")) {
+        $(".radio-show-input").show();
+      } else {
+        $(".radio-show-input").hide();
+      }
+    });
   });
   </script>
 </body>

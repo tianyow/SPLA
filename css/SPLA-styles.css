@@ -174,7 +174,6 @@ a.txt-link:hover {
 }
 
 .btn-gradient, .btn-gradient-gray, .btn-gradient-red {
-  border: 1px solid #00a6cc;
   color: #eee;
   background-color: #008ddf;
   /* Fallback Color */
@@ -204,6 +203,7 @@ a.txt-link:hover {
 }
 
 .btn-gradient-blue {
+  border: 1px solid #00a6cc;
   color: #fff;
   background-color: #0093E7;
   /* Fallback Color */
@@ -262,6 +262,7 @@ a.txt-link:hover {
 }
 
 .btn-gradient-red {
+  border: 1px solid red;
   color: #fff;
   background-color: #cc0000;
   /* Fallback Color */
@@ -284,6 +285,7 @@ a.txt-link:hover {
 }
 
 .btn-gradient-gray {
+  border: 1px solid #999;
   color: #fff !important;
   background-color: #999;
   /* Fallback Color */
@@ -671,7 +673,6 @@ textarea, textarea.form-control {
   font-weight: bold;
   padding: 3px 10px;
   width: auto;
-  max-width: 70%;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
@@ -757,7 +758,6 @@ textarea:disabled, textarea.form-control:disabled {
 .formWrap_label_inline .form-group {
   margin-bottom: 10px;
   padding-bottom: 10px;
-  padding-left: 60px;
   text-align: left;
   zoom: 1;
 }
@@ -771,11 +771,18 @@ textarea:disabled, textarea.form-control:disabled {
 .formWrap_label_inline .form-group:not(:last-child) {
   border-bottom: 1px dotted #ddd;
 }
-.formWrap_label_inline label {
+.formWrap_label_inline .form-group > label {
   display: inline;
   float: left;
   width: 220px;
   padding-top: 5px;
+  padding-left: 30px;
+}
+
+.radio-show-input {
+  background: #62e0e9;
+  display: inline-block;
+  padding: 3px 10px;
 }
 
 .table > tbody > tr > td,
@@ -1453,9 +1460,15 @@ tr.shown:hover {
   border: none;
   border-radius: 0;
 }
+.productInfoTabWrap .nav-tabs > li a:hover {
+  background: none;
+}
 .productInfoTabWrap .nav-tabs > li.active a {
   color: #00cfff;
   font-weight: bold;
+}
+.productInfoTabWrap .nav-tabs > li.active a:hover {
+  background: #fff;
 }
 
 .productInfoSearch {
