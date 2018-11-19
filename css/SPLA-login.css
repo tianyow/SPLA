@@ -111,7 +111,7 @@ a:focus {
   font-size: 20px;
   font-family: Arial, sans-serif;
   font-weight: bold;
-  padding: 12px 15px;
+  padding: 10px 12px;
   width: 100%;
   -webkit-border-radius: 1px;
   -moz-border-radius: 1px;
@@ -135,7 +135,13 @@ a:focus {
   color: #ff7a7a;
   font-size: 13px;
 }
-.login-section-right #btn-login {
+.login-section-right .field-validation-error {
+  display: block;
+}
+.login-section-right .field-validation-error:empty {
+  height: 0;
+}
+.login-section-right .btn-login {
   border: 1px solid #47c1ff;
   display: block;
   color: #fff;
@@ -162,7 +168,7 @@ a:focus {
   /* Opera 11.10+ */
   background-image: linear-gradient(top, #00cfff, #008ddf);
 }
-.login-section-right #btn-login:hover, .login-section-right #btn-login:focus {
+.login-section-right .btn-login:hover, .login-section-right .btn-login:focus {
   background: #00cfff;
   border: 1px solid #fff;
 }

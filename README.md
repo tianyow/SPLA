@@ -1,5 +1,7 @@
 # SPLA
 
+181119 調整 Login 畫面 UI style
+
 181113 新增 用量報表頁面(UsageForm.html) / 上傳 下載 icon
 
 181107 新增 用量回報頁面 / 網頁 favicon 圖片

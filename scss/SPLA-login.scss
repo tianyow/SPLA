@@ -113,7 +113,7 @@ a {
     font-size: 20px;
     font-family: Arial, sans-serif;
     font-weight: bold;
-    padding: 12px 15px;
+    padding: 10px 12px;
     width: 100%;
     @include borderRadius(1px);
     &:focus {
@@ -133,9 +133,13 @@ a {
     color: #ff7a7a;
     font-size: 13px;
   }
-
-
-  #btn-login {
+  .field-validation-error {
+    display: block;
+    &:empty {
+      height: 0;
+    }
+  }
+  .btn-login {
     border: 1px solid $blue-light-03;
     display: block;
     color: #fff;
