@@ -499,7 +499,7 @@ input[type=radio]:checked + label {
 }
 
 .inner-wrapper {
-  padding: 16px 20px 40px;
+  padding: 16px 20px 60px;
   height: calc(100vh - 75px);
   overflow: auto;
   position: relative;
@@ -663,6 +663,24 @@ input[type=radio]:checked + label {
   border-radius: 5px;
 }
 
+.data-qry-wrap_fixbottom {
+  background: rgba(25, 22, 55, 0.8);
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 10px 0;
+  text-align: center;
+  transition: all 0.2s linear;
+  z-index: 2;
+}
+.data-qry-wrap_fixbottom:hover {
+  padding: 28px 0;
+}
+.data-qry-wrap_fixbottom .btn, .data-qry-wrap_fixbottom .bootstrap-select {
+  font-size: 18px;
+  margin: 0 5px;
+}
+
 input[type=text],
 input[type=password],
 input[type=search],
@@ -691,6 +709,13 @@ input[type=date]:disabled,
 textarea:disabled, textarea.form-control:disabled {
   background: #eee;
   color: #777;
+}
+input[type=text].error,
+input[type=password].error,
+input[type=search].error,
+input[type=date].error,
+textarea.error, textarea.form-control.error {
+  border: 1px solid red;
 }
 
 .bootstrap-select {
@@ -919,6 +944,11 @@ table.dataTable tbody td {
 tr.shown,
 tr.shown:hover {
   background: #93f7ff !important;
+}
+
+.table-inline-errormsg {
+  color: red;
+  font-size: 12px;
 }
 
 .dataTables_length input,

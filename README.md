@@ -1,5 +1,10 @@
 # SPLA
 
+181121 
+新增通知 Email 範本 x6
+回報數量的錯誤訊息 --> UsageReport.html
+展開的 icon修改 / 用量報表 新增 下載當月 Batch 檔 --> UsageForm.html
+
 181119 調整 Login 畫面 UI style
 
 181113 新增 用量報表頁面(UsageForm.html) / 上傳 下載 icon

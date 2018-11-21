@@ -421,7 +421,7 @@ input[type=radio] {
   }
 }
 .inner-wrapper {
-  padding: 16px 20px 40px;
+  padding: 16px 20px 60px;
   height: calc(100vh - 75px);
   overflow: auto;
   position: relative;
@@ -566,6 +566,23 @@ input[type=radio] {
     @include borderRadius(5px);
   }
 }
+.data-qry-wrap_fixbottom {
+  background: rgba(25,22,55,.8);
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 10px 0;
+  text-align: center;
+  transition: all .2s linear;
+  z-index: 2;
+  &:hover {
+    padding: 28px 0;
+  }
+  .btn, .bootstrap-select {
+    font-size: 18px;
+    margin: 0 5px;
+  }
+}
 // Input Default Styles
 input[type="text"],
 input[type="password"],
@@ -586,6 +603,9 @@ textarea, textarea.form-control {
   &:disabled {
     background: #eee;
     color: #777;
+  }
+  &.error {
+    border: 1px solid red;
   }
 }
 .bootstrap-select {
@@ -841,6 +861,11 @@ table.dataTable {
 tr.shown,
 tr.shown:hover {
   background: #93f7ff !important;
+}
+// 表格內欄位檢核的錯誤訊息
+.table-inline-errormsg {
+  color: red;
+  font-size: 12px;
 }
 
 // --- 檢視筆數, 搜尋
