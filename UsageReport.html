@@ -72,8 +72,7 @@
     <div class="inner-wrapper">
       <div class="usageReport-info-row">
         <div class="usageReport-info-section">
-          <div class="report-count">已回報 <span class="badge">3</span> 次</div>
-          <div class="info-label">使用期間</div>
+          <div class="info-label">使用期間<div class="report-count">已回報 <span class="badge">3</span> 次</div></div>
           <div class="info-value">2018/12</div>
         </div>
         <div class="usageReport-info-section">
@@ -87,7 +86,7 @@
       </div><!-- /.usageReport-info-row -->
 
       <div class="table-responsive">
-        <table id="AppQryTable" class="table table-hover table-serial">
+        <table id="AppQryTable" class="table table-hover table-serial dataTable">
           <thead>
             <tr>
               <th width="100">產品編號</th>
@@ -147,29 +146,27 @@
               <td class="tdAmount">NT$ 896</td>
               <td class="tdAmount">NT$ 57,344</td>
             </tr>
+            <tr class="usageReport-sum">
+              <td colspan="6">
+                <div class="usageReport-sum-row">
+                  <div class="usageReport-sum-section">
+                    <div class="sum-label">合計</div>
+                    <div class="sum-value">NT$ 57,344</div>
+                  </div>
+                  <div class="usageReport-sum-section">
+                    <div class="sum-label">營業稅 5% (VAT 5%)</div>
+                    <div class="sum-value">NT$ 2,876</div>
+                  </div>
+                  <div class="usageReport-sum-section">
+                    <div class="sum-label">總價</div>
+                    <div class="sum-value">NT$ 60,211</div>
+                  </div>
+                </div><!-- /.usageReport-sum-row -->
+              </td>
+            </tr>
           </tbody>
         </table>
       </div><!-- /.table-responsive -->
-      <table style="width:100%;">
-        <tr class="usageReport-sum">
-          <td colspan="6">
-            <div class="usageReport-sum-row">
-              <div class="usageReport-sum-section">
-                <div class="sum-label">合計</div>
-                <div class="sum-value">NT$ 57,344</div>
-              </div>
-              <div class="usageReport-sum-section">
-                <div class="sum-label">營業稅 5% (VAT 5%)</div>
-                <div class="sum-value">NT$ 2,876</div>
-              </div>
-              <div class="usageReport-sum-section">
-                <div class="sum-label">總價</div>
-                <div class="sum-value">NT$ 60,211</div>
-              </div>
-            </div><!-- /.usageReport-sum-row -->
-          </td>
-        </tr>
-      </table>
       <div class="form-group btn-wrap align-center">
         <a class="btn btn-round btn-gradient-blue btn-lg" data-toggle="modal" data-target="#msg-submit">提交</a>
         <a class="btn btn-round btn-gradient-gray btn-lg">取消</a>
@@ -219,11 +216,7 @@
   <script src="js/SPLA-scripts.js"></script>
   <script>
     $(document).ready(function() {
-      $('#AppQryTable').DataTable({
-        paging: false,
-        info: false,
-        searching: false
-      });
+      // $('#AppQryTable').DataTable(qryTableOptions);
       $('.selectpicker').selectpicker({});
     });
   </script>
