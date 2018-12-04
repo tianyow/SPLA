@@ -1,5 +1,6 @@
 # SPLA
 
+181204 UI小調整
 181121 
 新增通知 Email 範本 x6
 回報數量的錯誤訊息 --> UsageReport.html

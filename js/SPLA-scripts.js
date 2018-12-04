@@ -43,7 +43,7 @@ $(document).ready(function() {
       '<div>'+
         '<table class="expand-detail-table">'+
           '<tr>'+
-            '<th>產品編號</th>'+
+            '<th width="100">產品編號</th>'+
             '<th>產品名稱</th>'+
             '<th class="aRight">數量</th>'+
             '<th class="aRight">單價</th>'+

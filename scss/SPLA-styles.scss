@@ -865,6 +865,7 @@ tr.shown:hover {
 // 表格內欄位檢核的錯誤訊息
 .table-inline-errormsg {
   color: red;
+  display: inline-block;
   font-size: 12px;
 }
 
@@ -1471,7 +1472,7 @@ tr.shown:hover {
 // 用量回報
 .usageReport-info-row {
   display: grid;
-  grid-template-columns: 1.5fr 1.5fr 8fr;
+  grid-template-columns: 2fr 2fr 10fr;
   grid-column-gap: 10px;
   margin-bottom: 10px;  
 }
