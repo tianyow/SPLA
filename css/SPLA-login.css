@@ -85,6 +85,7 @@ a:focus {
 
 #PwdRestForm {
   opacity: 0;
+  top: -400px;
 }
 
 .form-section {
