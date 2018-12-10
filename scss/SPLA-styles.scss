@@ -347,6 +347,13 @@ input[type=radio] {
     background: url(../images/btn_round_contract_disable.svg) no-repeat;
   }
 }
+//-- 刪除
+.btn_intable_delete {
+  background: url(../images/btn_round_delete.svg) no-repeat;
+  &:disabled, &.disabled {
+    background: url(../images/btn_round_delete_disable.svg) no-repeat;
+  }
+}
 
 // ------------------------------------------------------------------------------------------------ //
 // Page Styles

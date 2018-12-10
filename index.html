@@ -6,7 +6,9 @@
   <title>北祥 SPLA Monthly Report Portal</title>
   <link rel="SHORTCUT ICON" href="images/PSC-SPLA-Portal.png" />
   <!-- css -->
+  <link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="css/SPLA-login.css">
+  <link rel="stylesheet" href="css/SPLA-styles.css">
 
 </head>
 
@@ -58,14 +60,55 @@
           <button type="submit" class="btn-login">寄送重置密碼郵件</button>
           <div id="normalLogin" class="formSwitchLink"><a href="javascript:void(0);">我要登入</a></div>
         </form>
+
+        <!-- 測試用, 正式頁面請刪 -->
+        <div style="text-align:center;padding-top: 20px;">
+          <a data-toggle="modal" data-target="#reset-pwd">重置密碼訊息一</a>
+          <a data-toggle="modal" data-target="#reset-pwd-error">重置密碼訊息二</a>
+        </div><!-- 測試用 end -->
+
       </div><!-- /.form-section -->
       
     </div><!-- /.login-section-right -->
 
   </div><!-- /.login-wrap -->
 
+  <!-- modal: 發送置密碼郵件 -->
+  <div class="modal fade" id="reset-pwd" role="dialog">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-header">重置密碼</div>
+        <div id="message-sm-body" class="modal-body align-center">
+          將驗證密碼發送到郵件<br>x******@xxxxxx.xxx.xx?
+        </div>
+        <div class="modal-footer">
+          <a href="" class="btn btn-gradient btn-lg">確定</a>
+          <button type="button" class="btn btn-gradient-gray btn-lg" data-dismiss="modal" onclick="clearShowMessage();">取消</button>
+        </div>
+      </div>
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+
+  <!-- modal: 錯誤訊息 -->
+  <div class="modal fade" id="reset-pwd-error" role="dialog">
+    <div class="modal-dialog" style="width:360px;">
+      <div class="modal-content">
+        <div class="modal-header">重置密碼</div>
+        <div id="message-sm-body" class="modal-body align-center">
+          1.查無此客戶帳號，請輸入正確帳號。// (無此ID) <br>
+          2.驗證失敗，請輸入正確的資訊。// (兩者資料比對錯誤) 
+        </div>
+        <div class="modal-footer">
+          <a href="" class="btn btn-gradient btn-lg">確定</a>
+          <button type="button" class="btn btn-gradient-gray btn-lg" data-dismiss="modal" onclick="clearShowMessage();">取消</button>
+        </div>
+      </div>
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+
   <!-- script -->
   <script src="vendor/jquery/dist/jquery.min.js"></script>
+  <script src="vendor/bootstrap/dist/js/bootstrap.min.js"></script>
   <script>
     $(document).ready(function() {
       $('#pwdReset').on('click',function(){

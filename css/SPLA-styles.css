@@ -404,6 +404,13 @@ input[type=radio]:checked + label {
   background: url(../images/btn_round_contract_disable.svg) no-repeat;
 }
 
+.btn_intable_delete {
+  background: url(../images/btn_round_delete.svg) no-repeat;
+}
+.btn_intable_delete:disabled, .btn_intable_delete.disabled {
+  background: url(../images/btn_round_delete_disable.svg) no-repeat;
+}
+
 .navbar-vertical {
   float: left;
   position: fixed;
