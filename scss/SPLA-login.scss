@@ -83,12 +83,16 @@ a {
 }
 
 // 登入表單
-.login-section-right {
-  #LoginForm {
-    background: $blue-dark-03;
-    padding: 20px;
-    width: 400px;
-  }
+#PwdRestForm {
+  opacity: 0;
+}
+.form-section {
+  background: $blue-dark-03;
+  padding: 20px;
+  width: 400px;
+
+  position: absolute;
+  transform: translateY(-50%);
 
   label {
     color: $blue-light-02;
@@ -158,7 +162,7 @@ a {
     }
   }
 }
-.pwdReset {
+.formSwitchLink {
   text-align: center;
   a {
     color: #ddd;

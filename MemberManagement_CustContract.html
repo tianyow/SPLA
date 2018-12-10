@@ -9,16 +9,20 @@
   <link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="vendor/bootstrap-select/css/bootstrap-select.min.css">
   <link rel="stylesheet" href="vendor/DataTables/datatables.min.css"/>
+  <link rel="stylesheet" href="vendor/jquery-ui/jquery-ui.css" />
   <link rel="stylesheet" href="css/SPLA-styles.css">
+
 </head>
 
 <body>
+
   <nav id="SPLA-navbar" class="navbar-vertical">
+
     <div href="#"><img src="images/SPLA-logo.svg" alt=""></div>
     <div class="vertical-menu">
       <ul class="nav navbar-nav">
         <li class="nav-item">
-          <a href="#">
+          <a href="UsageForm.html">
             <span class="v-menu-icon"><i class="icon_chart_report"></i></span>
             <span class="navbar-link">用量報表</span>
           </a>
@@ -59,73 +63,76 @@
   </div><!-- /.nav-userinfo-bar -->
 
   <div class="page-title-header">
-    <h2 class="page-title">人員管理</h2>
-    <div class="data-qry-wrap">
-      <a href="MemberManagement_Add.html" class="btn btn-gradient btn-round"><img src="images/btn-icon-add.png" alt="" width="18">新增人員</a>
-    </div><!-- /.data-qry-wrap -->
+    <h2 class="page-title"><a href="MemberManagement_Qry.html">人員管理</a>合約關聯</h2>
   </div><!-- /.page-title-header -->
 
   <div class="contentWrapper">
     <div class="inner-wrapper">
-      <div class="table-responsive">
-        <table id="AppQryTable" class="table table-hover table-serial">
-          <thead>
-            <tr>
-              <th>公司名稱</th>
-              <th>企業帳戶</th>
-              <th>更新時間</th>
-              <th class="no-sort align-center" width="55">合約關聯</th>
-              <th class="no-sort align-center" width="55">編輯</th>
-              <th class="no-sort align-center" width="55">重置密碼</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>pscaber</td>
-              <td>20939790</td>
-              <td>2018/10/23 23:12</td>
-              <td align="center"><a href="MemberManagement_CustContract.html" class="btn_intable_round btn_intable_contract"></a></td>
-              <td align="center"><a href="MemberManagement_Edit.html" class="btn_intable_round btn_intable_edit"></a></td>
-              <td align="center"><a class="btn_intable_round btn_intable_resetPwd" data-toggle="modal" data-target="#reset-pwd"></a></td>
-            </tr>
-            <tr>
-              <td>pscaber1</td>
-              <td>20939791</td>
-              <td>2018/10/24 12:12</td>
-              <td align="center"><a href="MemberManagement_CustContract.html" class="btn_intable_round btn_intable_contract"></a></td>
-              <td align="center"><a href="MemberManagement_Edit.html" class="btn_intable_round btn_intable_edit"></a></td>
-              <td align="center"><a class="btn_intable_round btn_intable_resetPwd" data-toggle="modal" data-target="#reset-pwd"></a></td>
-            </tr>
-            <tr>
-              <td>pscaber2</td>
-              <td>20939792</td>
-              <td>2018/10/25 18:12</td>
-              <td align="center"><a class="btn_intable_round btn_intable_contract disabled"></a></td>
-              <td align="center"><a class="btn_intable_round btn_intable_edit disabled"></a></td>
-              <td align="center"><a class="btn_intable_round btn_intable_resetPwd disabled"></a></td>
-            </tr>
-          </tbody>
-        </table>
-      </div><!-- /.table-responsive -->
+      
+      <div class="formWrap_center">
+        <form method="post">
+          <div class="form-group">
+            <label for="companyrName">公司名稱</label>
+            <select name="" id="companyrName" class="selectpicker" data-live-search="true" disabled>
+              <option value="">TestingPSC(999999)</option>      
+            </select>
+          </div>
+          <span class="field-validation-valid text-danger"></span>
+
+          <div class="form-group">
+            <label for="contractNum">合約編號</label>
+            <select name="" id="contractNum" class="selectpicker">
+              <option value="">請選擇</option>      
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="mainContact">適用回報起日</label>
+            <input class="form-control datepicker" type="text">
+            <span class="field-validation-valid text-danger"></span>
+          </div>
+
+          <div class="form-group btn-wrap align-center">
+            <a class="btn btn-round btn-gradient-blue btn-lg">儲存</a>
+            <a class="btn btn-round btn-gradient-gray btn-lg" href="MemberManagement_Qry.html">取消</a>
+          </div>
+
+          </form>
+      </div><!-- /.formWrap_center -->
+
+      <div class="row">
+        <div class="row-inner">
+          <h3>歷史紀錄</h3>
+          <div class="table-responsive">
+            <table id="AppQryTable" class="table table-hover table-serial">
+              <thead>
+                <tr>
+                  <th>合約編號</th>
+                  <th>期間</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>888878</td>
+                  <td>2018/08/01 ~ 2018/08/31</td>
+                </tr>
+                <tr>
+                  <td>999989</td>
+                  <td>2018/07/01 ~ 2018/07/31</td>
+                </tr>
+                <tr>
+                  <td>999999</td>
+                  <td>2018/05/01 ~ 2018/06/31</td>
+                </tr>
+              </tbody>
+            </table>
+          </div><!-- /.table-responsive -->
+        </div>
+      </div>
+
     </div><!-- /.container-->
 
   </div><!-- /.contentWrapper -->
-
-  <!-- modal: 重置密碼 -->
-  <div class="modal fade" id="reset-pwd" role="dialog">
-    <div class="modal-dialog modal-sm">
-      <div class="modal-content">
-        <div class="modal-header">重置密碼</div>
-        <div id="message-sm-body" class="modal-body align-center">
-          將驗證密碼發送到郵件<br>x******@xxxxxx.xxx.xx?
-        </div>
-        <div class="modal-footer">
-          <a href="" class="btn btn-gradient btn-lg">確定</a>
-          <button type="button" class="btn btn-gradient-gray btn-lg" data-dismiss="modal" onclick="clearShowMessage();">取消</button>
-        </div>
-      </div>
-    </div><!-- /.modal-dialog -->
-  </div><!-- /.modal -->
 
   <!-- modal: 登出 -->
     <div class="modal fade" id="msg-logout" role="dialog">
@@ -137,15 +144,16 @@
           </div>
           <div class="modal-footer">
             <a href="index.html" class="btn btn-gradient btn-lg">確定</a>
-            <button type="button" class="btn btn btn-gradient-gray btn-lg" data-dismiss="modal" onclick="clearShowMessage();">取消</button>
+            <button type="button" class="btn btn-gradient-gray btn-lg" data-dismiss="modal" onclick="clearShowMessage();">取消</button>
           </div>
         </div>
         <!-- <a class="btnCloseModal" data-dismiss="modal">&times;</a> -->
       </div><!-- /.modal-dialog -->
-    </div><!-- /.modal -->
+    </div><!-- /.modal --> 
 
   <!-- script -->
   <script src="vendor/jquery/dist/jquery.min.js"></script>
+  <script src="vendor/jquery-ui/jquery-ui.min.js"></script>
   <script src="vendor/bootstrap/dist/js/bootstrap.min.js"></script>
   <script src="vendor/bootstrap-select/js/bootstrap-select.min.js"></script>
   <script src="vendor/DataTables/datatables.min.js"></script>

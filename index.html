@@ -22,25 +22,57 @@
     </div><!-- /.login-section-left -->
 
     <div class="login-section-right">
-      <form id="LoginForm" method="post">
-        <div class="form-group">
-          <label for="">使用者帳號</label>
-          <input class="form-control" id="AccountID" name="AccountID" placeholder="" type="text" value="" />
-          <span class="field-validation-valid"></span>
-        </div>
 
-        <div class="form-group">
-          <label for="">使用者密碼</label>
-          <input class="form-control error" id="AccountPwd" name="AccountPwd" placeholder="" type="password" />
-          <span class="field-validation-valid">錯誤訊息內容</span>
-        </div>
-        <button type="submit" class="btn-login">登入</button>
-        <div class="pwdReset"><a href="">忘記密碼?</a></div>
-      </form>
+      <!-- 登入 -->
+      <div id="LoginForm" class="form-section">
+        <form method="post">
+          <div class="form-group">
+            <label for="">使用者帳號</label>
+            <input class="form-control" id="AccountID" name="AccountID" placeholder="" type="text" value="" />
+            <span class="field-validation-valid"></span>
+          </div>
 
+          <div class="form-group">
+            <label for="">使用者密碼</label>
+            <input class="form-control error" id="AccountPwd" name="AccountPwd" placeholder="" type="password" />
+            <span class="field-validation-valid">錯誤訊息內容</span>
+          </div>
+          <button type="submit" class="btn-login">登入</button>
+          <div id="pwdReset" class="formSwitchLink"><a href="javascript:void(0);">忘記密碼?</a></div>
+        </form>
+      </div><!-- /.form-section -->
+
+      <!-- 忘記密碼 -->
+      <div id="PwdRestForm" class="form-section">
+        <form method="post">
+          <div class="form-group">
+            <label for="">Email 帳號</label>
+            <input class="form-control" id="" name="" placeholder="" type="text" value="" />
+            <span class="field-validation-valid"></span>
+          </div>
+          <button type="submit" class="btn-login">寄送重置密碼郵件</button>
+          <div id="normalLogin" class="formSwitchLink"><a href="javascript:void(0);">我要登入</a></div>
+        </form>
+      </div><!-- /.form-section -->
+      
     </div><!-- /.login-section-right -->
-    
+
   </div><!-- /.login-wrap -->
+
+  <!-- script -->
+  <script src="vendor/jquery/dist/jquery.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('#pwdReset').on('click',function(){
+        $('#LoginForm').animate({ opacity: 0, top: "-100px"}, 300,);
+        $('#PwdRestForm').animate({ opacity: 1, top: "50%"}, 300,);
+      });
+      $('#normalLogin').on('click',function(){
+        $('#LoginForm').animate({ opacity: 1, top: "50%"}, 300,);
+        $('#PwdRestForm').animate({ opacity: 0, top: "-100px"}, 300,);
+      });
+    });
+  </script>
 
 </body>
 </html>

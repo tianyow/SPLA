@@ -83,12 +83,18 @@ a:focus {
   letter-spacing: 2px;
 }
 
-.login-section-right #LoginForm {
+#PwdRestForm {
+  opacity: 0;
+}
+
+.form-section {
   background: #14283e;
   padding: 20px;
   width: 400px;
+  position: absolute;
+  transform: translateY(-50%);
 }
-.login-section-right label {
+.form-section label {
   color: #b7faff;
   font-size: 10px;
   float: left;
@@ -96,7 +102,7 @@ a:focus {
   position: relative;
   width: 100%;
 }
-.login-section-right label:after {
+.form-section label:after {
   content: "";
   display: block;
   border-top: 1px solid #9d9d9d;
@@ -105,8 +111,8 @@ a:focus {
   left: 65px;
   right: 0;
 }
-.login-section-right input[type=text],
-.login-section-right input[type=password] {
+.form-section input[type=text],
+.form-section input[type=password] {
   border: 1px solid #eee;
   font-size: 20px;
   font-family: Arial, sans-serif;
@@ -117,31 +123,31 @@ a:focus {
   -moz-border-radius: 1px;
   border-radius: 1px;
 }
-.login-section-right input[type=text]:focus,
-.login-section-right input[type=password]:focus {
+.form-section input[type=text]:focus,
+.form-section input[type=password]:focus {
   background: #eee;
 }
-.login-section-right input[type=text].error,
-.login-section-right input[type=password].error {
+.form-section input[type=text].error,
+.form-section input[type=password].error {
   background: #ffcdcd;
 }
-.login-section-right .form-group {
+.form-section .form-group {
   margin-bottom: 20px;
 }
-.login-section-right .form-control {
+.form-section .form-control {
   height: auto;
 }
-.login-section-right .field-validation-valid {
+.form-section .field-validation-valid {
   color: #ff7a7a;
   font-size: 13px;
 }
-.login-section-right .field-validation-error {
+.form-section .field-validation-error {
   display: block;
 }
-.login-section-right .field-validation-error:empty {
+.form-section .field-validation-error:empty {
   height: 0;
 }
-.login-section-right .btn-login {
+.form-section .btn-login {
   border: 1px solid #47c1ff;
   display: block;
   color: #fff;
@@ -168,19 +174,19 @@ a:focus {
   /* Opera 11.10+ */
   background-image: linear-gradient(top, #00cfff, #008ddf);
 }
-.login-section-right .btn-login:hover, .login-section-right .btn-login:focus {
+.form-section .btn-login:hover, .form-section .btn-login:focus {
   background: #00cfff;
   border: 1px solid #fff;
 }
 
-.pwdReset {
+.formSwitchLink {
   text-align: center;
 }
-.pwdReset a {
+.formSwitchLink a {
   color: #ddd;
   font-size: 13px;
 }
-.pwdReset a:hover {
+.formSwitchLink a:hover {
   color: #fff;
   text-decoration: none;
 }
