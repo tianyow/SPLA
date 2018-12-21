@@ -1,5 +1,5 @@
 @import 'mixins';
-@import url(http://fonts.googleapis.com/css?family=Roboto:300,400,700);
+@import url(https://fonts.googleapis.com/css?family=Roboto:300,400,700);
 // Global Styles
 * {
   box-sizing: border-box;
@@ -32,7 +32,7 @@ h3 {
   font-size: 26px;
 }
 .align-center {
-  text-align: center;
+  text-align: center !important;
 }
 
 .align-right {
@@ -569,6 +569,7 @@ input[type=radio] {
     }
   }
   a.btn {
+    border: 1px solid #00a6cc;
     padding: 6px 20px;
     @include dropShadow(2px, 2px, 5px, 5px, $blue-dark-02);
   }
@@ -608,6 +609,11 @@ input[type=radio] {
   .btn, .bootstrap-select {
     font-size: 18px;
     margin: 0 5px;
+  }
+  input[type="text"].form-control {
+    font-size: 18px;
+    height: 39px;
+    transform: translateY(3px);
   }
 }
 // Input Default Styles
@@ -680,7 +686,7 @@ textarea, textarea.form-control {
   margin: 0 auto;
   margin-top: 40px;
   margin-bottom: 20px;
-  overflow: hidden;
+  //overflow: hidden;
   width: 50%;
   textarea, textarea.form-control {
     width: 100%;
@@ -1516,8 +1522,11 @@ tr.shown:hover {
 
 // 用量回報
 .usageReport-info-row {
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: 2fr 2fr 10fr;
+  -ms-grid-columns: 188px 130px auto;
+  grid-template-columns: 188px 130px auto;
+  -ms-grid-column-gap: 10px;
   grid-column-gap: 10px;
   margin-bottom: 10px;  
 }
@@ -1546,6 +1555,9 @@ tr.shown:hover {
     font-family: "Roboto";
     font-size: 21px;
     font-weight: bold;
+    .bootstrap-select {
+      width: 100% !important;
+    }
   }
 
 }
@@ -1557,7 +1569,9 @@ tr.usageReport-sum {
   }
 }
 .usageReport-sum-row {
+  -ms-display: grid;
   display: grid;
+  -ms-grid-template-columns: 1fr 1fr 1fr;
   grid-template-columns: 1fr 1fr 1fr;
   padding: 8px 0;
 }
@@ -1573,5 +1587,10 @@ tr.usageReport-sum {
     font-family: "Roboto";
     font-size: 32px;
     font-weight: bold;
+  }
+  // 合計
+  #SumTotalPrice, #VAT {
+    font-size: 24px;
+    padding-top: 10px;
   }
 }
