@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>北祥 SPLA Monthly Report Portal</title>
+  <link rel="SHORTCUT ICON" href="images/PSC-SPLA-Portal.png" />
+  <!-- css -->
+  <link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="vendor/bootstrap-select/css/bootstrap-select.min.css">
+  <link rel="stylesheet" href="vendor/DataTables/datatables.min.css"/>
+  <link rel="stylesheet" href="css/SPLA-styles.css">
+</head>
+
+<body>
+  <nav id="SPLA-navbar" class="navbar-vertical">
+    <div href="#"><img src="images/SPLA-logo.svg" alt=""></div>
+    <div class="vertical-menu">
+      <ul class="nav navbar-nav">
+        <li class="nav-item">
+          <a href="UsageForm.html">
+            <span class="v-menu-icon"><i class="icon_chart_report"></i></span>
+            <span class="navbar-link">用量報表</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="CustomerInfo_Qry.html">
+            <span class="v-menu-icon"><i class="icon_user_info"></i></span>
+            <span class="navbar-link">客戶資訊</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="ProductInfo.html">
+            <span class="v-menu-icon"><i class="icon_product_info"></i></span>
+            <span class="navbar-link">產品資訊</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="MemberManagement_Qry.html">
+            <span class="v-menu-icon"><i class="icon_member_management"></i></span>
+            <span class="navbar-link">人員管理</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="History_Qry.html">
+            <span class="v-menu-icon"><i class="icon_history_report"></i></span>
+            <span class="navbar-link">歷史報表</span>
+          </a>
+        </li>
+        <li class="nav-item active">
+          <a href="UsageReport.html">
+            <span class="v-menu-icon"><i class="icon_chart_report"></i></span>
+            <span class="navbar-link">用量回報</span>
+          </a>
+        </li>
+      </ul>
+    </div><!-- /.vertical-menu -->
+  </nav><!-- / #admin-navbar -->
+
+  <div class="nav-userinfo-bar">
+    <div class="nav-userinfo">
+      <div class="nav-usermail"><a href="#">admin01@pershing.onmicrosoft.com</a></div>
+      <a class="nav-logout" href="" data-toggle="modal" data-target="#msg-logout">登出</a>
+    </div><!-- /.nav-userinfo -->
+  </div><!-- /.nav-userinfo-bar -->
+
+  <div class="page-title-header">
+    <h2 class="page-title">用量回報</h2>
+  </div><!-- /.page-title-header -->
+
+  <div class="contentWrapper">
+    <div class="inner-wrapper">
+      <div class="usageReport-info-row">
+        <div class="usageReport-info-section">
+          <div class="info-label">使用期間<div class="report-count">已回報 <span class="badge">3</span> 次</div></div>
+          <div class="info-value date-group">
+            <select name="" id="" class="selectpicker">
+              <option value="">2018</option>    
+            </select>
+            <select name="" id="" class="selectpicker">
+              <option value="">12月</option>    
+            </select>
+          </div>
+        </div>
+        <div class="usageReport-info-section">
+          <div class="info-label">合約編號</div>
+          <div class="info-value">54448791</div>
+        </div>
+        <div class="usageReport-info-section">
+          <div class="info-label">服務供應商</div>
+          <div class="info-value">
+            <select name="" id="customerName" class="selectpicker" data-live-search="true">
+              <option value="">CSI-ABER</option>
+              <option value="">GAMANIA-果核</option>
+              <option value="">GAMANIA-果核2</option>
+              <option value="">GAMANIA-果核2-2</option>
+              <option value="">中餘國際股份有限公司</option>
+              <option value="">元亨法律事務所</option>
+              <option value="">世達先進科技股份公限公司</option>
+              <option value="">包德貿易股份有公司</option>
+              <option value="">台灣競舞娛樂有限公司</option>
+              <option value="">竹北市農會</option>
+              <option value="">佐見啦生技股份有限公司</option>
+              <option value="">香港商烽泰科技有限公司</option>
+              <option value="">悠活原力有限公司</option>
+              <option value="">都城實業股份有限公司</option>
+              <option value="">筑科科技股份有限公司</option>
+              <option value="">微智冷科技股份有限公司</option>
+              <option value="">新豐鄉農會</option>
+              <option value="">群光電能科技股份有限公司</option>
+              <option value="">遊戲橘子數位科技股份有限公司</option>
+              <option value="">德宇製作有限公司</option>
+              <option value="">橙宏投資顧問有限公司</option>
+              <option value="">豐睿股份有限公司</option>           
+            </select>
+          </div>
+        </div>
+      </div><!-- /.usageReport-info-row -->
+
+      <div class="table-responsive">
+        <table id="AppQryTable" class="table table-hover table-serial dataTable">
+          <thead>
+            <tr>
+              <th width="100">產品編號</th>
+              <th>產品名稱</th>
+              <th width="110">數量</th>
+              <th class="tdAmount" width="40">月數</th>
+              <th class="tdAmount" width="100">價格(未稅)</th>
+              <th class="tdAmount" width="100">價格總計</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>9EA-00039</td>
+              <td>WinSvrDCCore ALNG LicSAPk MVL 2Lic CoreL WinSvrDCCore ALNG LicSAPk MVL 2Lic CoreL WinSvrDCCore ALNG LicSAPk MVL 2Lic CoreL</td>
+              <td><input class="form-control" type="text" size="6"/></td>
+              <td class="tdAmount">1</td>
+              <td class="tdAmount">NT$ 896</td>
+              <td class="tdAmount">NT$ 57,344</td>
+            </tr>
+            <tr>
+              <td>9EA-00039</td>
+              <td>WinSvrDCCore ALNG LicSAPk MVL 2Lic CoreL</td>
+              <td><input class="form-control error" type="text" size="6"/><span class="table-inline-errormsg">數量需 &gt; 6</span></td>
+              <td class="tdAmount">1</td>
+              <td class="tdAmount">NT$ 896</td>
+              <td class="tdAmount">NT$ 57,344</td>
+            </tr>
+            <tr>
+              <td>9EA-00039</td>
+              <td>WinSvrDCCore ALNG LicSAPk MVL 2Lic CoreL</td>
+              <td><input class="form-control" type="text" size="6"/></td>
+              <td class="tdAmount">1</td>
+              <td class="tdAmount">NT$ 896</td>
+              <td class="tdAmount">NT$ 57,344</td>
+            </tr>
+            <tr>
+              <td>9EA-00039</td>
+              <td>WinSvrDCCore ALNG LicSAPk MVL 2Lic CoreL</td>
+              <td><input class="form-control" type="text" size="6"/></td>
+              <td class="tdAmount">1</td>
+              <td class="tdAmount">NT$ 896</td>
+              <td class="tdAmount">NT$ 57,344</td>
+            </tr>
+            <tr>
+              <td>9EA-00039</td>
+              <td>WinSvrDCCore ALNG LicSAPk MVL 2Lic CoreL</td>
+              <td><input class="form-control" type="text" size="6"/></td>
+              <td class="tdAmount">1</td>
+              <td class="tdAmount">NT$ 896</td>
+              <td class="tdAmount">NT$ 57,344</td>
+            </tr>
+            <tr>
+              <td>9EA-00039</td>
+              <td>WinSvrDCCore ALNG LicSAPk MVL 2Lic CoreL</td>
+              <td><input class="form-control" type="text" size="6"/></td>
+              <td class="tdAmount">1</td>
+              <td class="tdAmount">NT$ 896</td>
+              <td class="tdAmount">NT$ 57,344</td>
+            </tr>
+            <tr class="usageReport-sum">
+              <td colspan="6">
+                <div class="usageReport-sum-row">
+                  <div class="usageReport-sum-section">
+                    <div class="sum-label">合計</div>
+                    <div class="sum-value">NT$ 57,344</div>
+                  </div>
+                  <div class="usageReport-sum-section">
+                    <div class="sum-label">營業稅 5% (VAT 5%)</div>
+                    <div class="sum-value">NT$ 2,876</div>
+                  </div>
+                  <div class="usageReport-sum-section">
+                    <div class="sum-label">總價</div>
+                    <div class="sum-value">NT$ 60,211</div>
+                  </div>
+                </div><!-- /.usageReport-sum-row -->
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div><!-- /.table-responsive -->
+      <div class="form-group btn-wrap align-center">
+        <a class="btn btn-round btn-gradient-blue btn-lg" data-toggle="modal" data-target="#msg-submit" disabled>提交</a>
+        <a class="btn btn-round btn-gradient-gray btn-lg" disabled>取消</a>
+      </div>
+    </div><!-- /.inner-wrapper-->
+
+  </div><!-- /.contentWrapper -->
+
+  <!-- modal: 提交提示訊息 -->
+    <div class="modal fade" id="msg-submit" role="dialog">
+      <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+          <div class="modal-header"></div>
+          <div id="message-sm-body" class="modal-body align-center">
+            提交提示訊息
+          </div>
+          <div class="modal-footer">
+            <a class="btn btn-gradient btn-lg">確定</a>
+          </div>
+        </div>
+        <!-- <a class="btnCloseModal" data-dismiss="modal">&times;</a> -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+  <!-- modal: 登出 -->
+    <div class="modal fade" id="msg-logout" role="dialog">
+      <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+          <div class="modal-header"></div>
+          <div id="message-sm-body" class="modal-body align-center">
+            確定要登出嗎?
+          </div>
+          <div class="modal-footer">
+            <a href="index.html" class="btn btn-gradient btn-lg">確定</a>
+            <button type="button" class="btn btn btn-gradient-gray btn-lg" data-dismiss="modal" onclick="clearShowMessage();">取消</button>
+          </div>
+        </div>
+        <!-- <a class="btnCloseModal" data-dismiss="modal">&times;</a> -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+  <!-- script -->
+  <script src="vendor/jquery/dist/jquery.min.js"></script>
+  <script src="vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="vendor/bootstrap-select/js/bootstrap-select.min.js"></script>
+  <script src="vendor/DataTables/datatables.min.js"></script>
+  <script src="js/SPLA-scripts.js"></script>
+  <script>
+    $(document).ready(function() {
+      // $('#AppQryTable').DataTable(qryTableOptions);
+      $('.selectpicker').selectpicker({});
+    });
+  </script>
+
+</body>
+
+</html>
