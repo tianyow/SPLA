@@ -1522,19 +1522,33 @@ tr.shown:hover {
 
 // 用量回報
 .usageReport-info-row {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 188px 130px auto;
-  grid-template-columns: 188px 130px auto;
-  -ms-grid-column-gap: 10px;
-  grid-column-gap: 10px;
+  // display: -ms-grid;
+  // display: grid;
+  // -ms-grid-columns: 188px 130px auto;
+  // grid-template-columns: 188px 130px auto;
+  // -ms-grid-column-gap: 10px;
+  // grid-column-gap: 10px;
   margin-bottom: 10px;  
+  @include clearfix;
 }
 .usageReport-info-section {
   box-sizing: border-box;
   border: 2px solid $blue-neon;
+  float: left;
   padding: 5px 10px;
-
+  margin-right: 10px;
+  min-height: 75px;
+  width: 100%;
+  &:nth-child(1) {
+    width: 190px;
+  }
+  &:nth-child(2) {
+    width: 130px;
+  }
+  &:nth-child(3) {
+    margin-right: 0;
+    width: calc(100% - 190px - 130px - 20px);
+  }
   .info-label {
     color: $blue-neon;
     font-size: 13px;
@@ -1577,13 +1591,15 @@ tr.usageReport-sum {
   }
 }
 .usageReport-sum-row {
-  -ms-display: grid;
-  display: grid;
-  -ms-grid-template-columns: 1fr 1fr 1fr;
-  grid-template-columns: 1fr 1fr 1fr;
+  // -ms-display: grid;
+  // display: grid;
+  // -ms-grid-template-columns: 1fr 1fr 1fr;
+  // grid-template-columns: 1fr 1fr 1fr;
   padding: 8px 0;
 }
 .usageReport-sum-section {
+  float: left;
+  width: calc(100% / 3);
   .sum-label {
     color: #999;
     font-size: 13px;
@@ -1592,13 +1608,20 @@ tr.usageReport-sum {
   }
   .sum-value {
     color: #333;
-    font-family: "Roboto";
+    font-family: "Roboto", sans-serif;
     font-size: 32px;
     font-weight: bold;
   }
-  // 合計
-  #SumTotalPrice, #VAT {
-    font-size: 24px;
-    padding-top: 10px;
+  // 合計 及 營業稅
+  // #SumTotalPrice, #VAT {
+  //   font-size: 24px;
+  //   padding-top: 8px;
+  // }
+  &:not(:last-child) {
+    .sum-value {
+      color: #444;
+      font-size: 24px;
+      padding-top: 8px;
+    }
   }
 }

@@ -1598,19 +1598,35 @@ tr.shown:hover {
 }
 
 .usageReport-info-row {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 188px 130px auto;
-  grid-template-columns: 188px 130px auto;
-  -ms-grid-column-gap: 10px;
-  grid-column-gap: 10px;
   margin-bottom: 10px;
+  zoom: 1;
+}
+.usageReport-info-row:before, .usageReport-info-row:after {
+  content: "";
+  display: table;
+}
+.usageReport-info-row:after {
+  clear: both;
 }
 
 .usageReport-info-section {
   box-sizing: border-box;
   border: 2px solid #62e0e9;
+  float: left;
   padding: 5px 10px;
+  margin-right: 10px;
+  min-height: 75px;
+  width: 100%;
+}
+.usageReport-info-section:nth-child(1) {
+  width: 190px;
+}
+.usageReport-info-section:nth-child(2) {
+  width: 130px;
+}
+.usageReport-info-section:nth-child(3) {
+  margin-right: 0;
+  width: calc(100% - 190px - 130px - 20px);
 }
 .usageReport-info-section .info-label {
   color: #62e0e9;
@@ -1655,13 +1671,13 @@ tr.usageReport-sum:hover {
 }
 
 .usageReport-sum-row {
-  -ms-display: grid;
-  display: grid;
-  -ms-grid-template-columns: 1fr 1fr 1fr;
-  grid-template-columns: 1fr 1fr 1fr;
   padding: 8px 0;
 }
 
+.usageReport-sum-section {
+  float: left;
+  width: calc(100% / 3);
+}
 .usageReport-sum-section .sum-label {
   color: #999;
   font-size: 13px;
@@ -1670,13 +1686,14 @@ tr.usageReport-sum:hover {
 }
 .usageReport-sum-section .sum-value {
   color: #333;
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
   font-size: 32px;
   font-weight: bold;
 }
-.usageReport-sum-section #SumTotalPrice, .usageReport-sum-section #VAT {
+.usageReport-sum-section:not(:last-child) .sum-value {
+  color: #444;
   font-size: 24px;
-  padding-top: 10px;
+  padding-top: 8px;
 }
 
 /*# sourceMappingURL=SPLA-styles.css.map */
