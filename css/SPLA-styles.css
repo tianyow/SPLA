@@ -1647,7 +1647,7 @@ tr.shown:hover {
 .usageReport-info-section .info-value {
   color: #666;
   clear: both;
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
   font-size: 21px;
   font-weight: bold;
 }
@@ -1676,7 +1676,7 @@ tr.usageReport-sum:hover {
 
 .usageReport-sum-section {
   float: left;
-  width: calc(100% / 3);
+  width: 33%;
 }
 .usageReport-sum-section .sum-label {
   color: #999;

@@ -1568,7 +1568,7 @@ tr.shown:hover {
   .info-value {
     color: #666;
     clear: both;
-    font-family: "Roboto";
+    font-family: "Roboto", sans-serif;
     font-size: 21px;
     font-weight: bold;
     .bootstrap-select {
@@ -1599,7 +1599,7 @@ tr.usageReport-sum {
 }
 .usageReport-sum-section {
   float: left;
-  width: calc(100% / 3);
+  width: 33%;
   .sum-label {
     color: #999;
     font-size: 13px;
