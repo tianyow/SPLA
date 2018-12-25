@@ -347,7 +347,7 @@ input[type=radio]:checked + label {
 
 .btn_intable_round {
   border: none;
-  display: block;
+  display: inline-block;
   width: 37px;
   height: 37px;
   transition: all 0.2s linear;
@@ -795,6 +795,14 @@ textarea.error, textarea.form-control.error {
   margin-top: 40px;
   margin-bottom: 20px;
   width: 50%;
+  zoom: 1;
+}
+.formWrap_center:before, .formWrap_center:after {
+  content: "";
+  display: table;
+}
+.formWrap_center:after {
+  clear: both;
 }
 .formWrap_center textarea, .formWrap_center textarea.form-control {
   width: 100%;
@@ -802,6 +810,9 @@ textarea.error, textarea.form-control.error {
 }
 .formWrap_center .bootstrap-select {
   width: 100% !important;
+}
+.formWrap_center #ContactMail {
+  width: 100%;
 }
 
 .input-group .form-control {

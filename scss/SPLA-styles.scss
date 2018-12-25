@@ -291,7 +291,7 @@ input[type=radio] {
 // 表格裡的按鈕
 .btn_intable_round {
   border: none;
-  display: block;
+  display: inline-block;
   width: 37px;
   height: 37px;
   transition: all .2s linear;
@@ -688,6 +688,7 @@ textarea, textarea.form-control {
   margin-bottom: 20px;
   //overflow: hidden;
   width: 50%;
+  @include clearfix();
   textarea, textarea.form-control {
     width: 100%;
     max-width: 100%;
@@ -696,7 +697,10 @@ textarea, textarea.form-control {
   .bootstrap-select {
     width: 100% !important;
   }
-  
+  // 主要聯絡人信箱
+  #ContactMail {
+    width: 100%;
+  }
 }
 .input-group {
   .form-control {
